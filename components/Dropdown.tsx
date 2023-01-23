@@ -29,7 +29,7 @@ export const Dropdown = ({
     return () => {
       document.removeEventListener('click', closeDropdown);
     };
-  }, []);
+  }, [id]);
 
   return (
     <div className={`relative ${className}`} id={id}>

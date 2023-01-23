@@ -5,7 +5,6 @@ import FilterIcon from 'Icons/filter.svg';
 import PinIcon from 'Icons/pin.svg';
 import ArrowIcon from 'Icons/arrow';
 import CloseIcon from 'Icons/close.svg';
-import GpsIcon from 'Icons/gps.svg';
 
 const Filter = () => {
   const [isOpen, setIsOpen] = useState(false);

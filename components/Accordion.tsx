@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 const Accordion = ({ title, items }) => {
@@ -26,8 +27,11 @@ const Accordion = ({ title, items }) => {
       {expanded && (
         <div className="flex flex-col">
           {items.map((item) => (
-            <div className="my-2 flex h-[80px] overflow-hidden rounded-lg border border-gray-light3 bg-white">
-              <img src={item.image} className="mr-3 h-full w-[88px]" alt="" />
+            <div
+              key={item.title}
+              className="my-2 flex h-[80px] overflow-hidden rounded-lg border border-gray-light3 bg-white"
+            >
+              <Image src={item.image} className="mr-3 h-full w-[88px]" alt="" />
               <div className="flex flex-col pt-2.5">
                 <span className="mb-1.5 text-base font-medium leading-3 text-gray-dark3">
                   {item.title}

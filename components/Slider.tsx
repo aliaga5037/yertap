@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Close from '@assets/icons/close.svg';
 import ArrowIcon from 'Icons/arrow_white.svg';
+import Image from 'next/image';
 
 const Slider = ({ images, start, onClose }) => {
   const [current, setCurrent] = useState(start);
@@ -38,7 +39,7 @@ const Slider = ({ images, start, onClose }) => {
               key={index}
             >
               {index === current && (
-                <img
+                <Image
                   src={image}
                   alt="restaurant"
                   className="h-[504px] w-full rounded-b-lg object-fill"

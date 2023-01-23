@@ -2,12 +2,13 @@ import { GetServerSideProps } from 'next';
 import Layout from '@components/Layout';
 import { sampleRestaurantData } from '../../../utils/sample-data';
 import Badge from '@components/Badge';
-import Tabs from '../Tabs';
+import Tabs from '@components/restaurants/Tabs';
 
 import ArrowIcon from 'Icons/arrow';
 import StartIcon from 'Icons/star.svg';
 import PhotoIcon from 'Icons/photo.svg';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Details = ({ item }) => {
   return (
@@ -67,17 +68,17 @@ const Details = ({ item }) => {
         </div>
         <div className="flex h-[416px] gap-2 overflow-hidden rounded-lg">
           <div className="flex">
-            <img src={item.gallery[0]} alt="" className="h-full w-[636px]" />
+            <Image src={item.gallery[0]} alt="" className="h-full w-[636px]" />
           </div>
           <div className="flex flex-col gap-2">
             <div className="flex gap-2">
-              <img src={item.gallery[1]} alt="" className="h-full" />
-              <img src={item.gallery[2]} alt="" className="h-full" />
+              <Image src={item.gallery[1]} alt="" className="h-full" />
+              <Image src={item.gallery[2]} alt="" className="h-full" />
             </div>
             <div className="flex gap-2">
-              <img src={item.gallery[3]} alt="" className="h-full" />
-              <img src={item.gallery[4]} alt="" className="h-full" />
-              <img src={item.gallery[5]} alt="" className="h-full" />
+              <Image src={item.gallery[3]} alt="" className="h-full" />
+              <Image src={item.gallery[4]} alt="" className="h-full" />
+              <Image src={item.gallery[5]} alt="" className="h-full" />
             </div>
           </div>
         </div>

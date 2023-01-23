@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import Dropdown from './Dropdown';
 import Avatar from './Avatar';
 import TextField from '@mui/material/TextField';

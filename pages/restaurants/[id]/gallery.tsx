@@ -6,6 +6,7 @@ import { sampleRestaurantData } from '@utils/sample-data';
 
 import ArrowIcon from 'Icons/arrow';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Gallery = ({ item }) => {
   const [showSlider, setShowSlider] = useState<boolean>(false);
@@ -57,7 +58,7 @@ const Gallery = ({ item }) => {
               onClick={() => handleShowSlider(i)}
               key={image}
             >
-              <img
+              <Image
                 className="h-full w-full object-cover"
                 src={image}
                 alt="image"
