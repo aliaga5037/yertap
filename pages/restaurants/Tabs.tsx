@@ -84,7 +84,7 @@ export default function BasicTabs({ item }) {
 
         <div className="ml-auto flex flex-col pt-8">
           <Card
-            id="1"
+            id={1}
             title="Burger King"
             type="Fast Food"
             image="/images/starbucks.jpg"
@@ -97,7 +97,7 @@ export default function BasicTabs({ item }) {
             className="w-[269px]"
           />
           <Card
-            id="2"
+            id={2}
             title="Burger King"
             type="Fast Food"
             image="/images/vapiano.jpg"

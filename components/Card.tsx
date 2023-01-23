@@ -18,7 +18,7 @@ interface CardProps {
   marked: boolean;
   image: string;
   className?: string;
-  id: string;
+  id: number;
 }
 
 const Card = ({
