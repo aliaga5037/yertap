@@ -6,6 +6,7 @@ import About from './about';
 import Card from '@components/Card';
 import Menu from './menu';
 import Highlights from './highlights';
+import Reviews from './reviews';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -76,7 +77,11 @@ export default function BasicTabs({ item }) {
           <Highlights items={item.highlights} />
         </TabPanel>
         <TabPanel value={value} index={3}>
-          Item Three
+          <Reviews review={item.review} place={{
+            title: item.title,
+            type: item.type,
+            image: item.image,
+          }} />
         </TabPanel>
         <TabPanel value={value} index={4}>
           Item Three

@@ -20,7 +20,7 @@
       "@utils/*": ["utils/*"],
       "@lib/*": ["lib/*"],
       "@services/*": ["services/*"],
-      "@interfaces/*": ["interfaces/*"],
+      "@types/*": ["types/*"],
       "@assets/*": ["assets/*"],
       "Icons/*": ["assets/icons/*"]
     }

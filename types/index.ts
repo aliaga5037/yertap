@@ -7,6 +7,27 @@
 export type User = {
   id: number;
   name: string;
+  image: string;
+};
+
+export type Review = {
+  average: number;
+  count: number;
+  stars: {
+    5: number;
+    4: number;
+    3: number;
+    2: number;
+    1: number;
+  };
+  items: {
+    id: number;
+    user: User;
+    rating: number;
+    text: string;
+    date: string;
+    claps: number;
+  }[];
 };
 
 export type Restaurant = {
@@ -35,4 +56,5 @@ export type Restaurant = {
     title: string;
     icon: string;
   }[];
+  review?: Review;
 };

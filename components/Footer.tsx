@@ -31,7 +31,7 @@ const Footer = () => {
       <div className="flex justify-between px-[120px] pt-[88px] pb-14">
         <div className="flex flex-col">
           <Image
-            className="mb-6"
+            className="mb-6 h-auto w-auto"
             src="/images/brand.png"
             alt="Yertap"
             width={163}

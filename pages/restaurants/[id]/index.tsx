@@ -66,19 +66,55 @@ const Details = ({ item }) => {
             Show All (32) Photos
           </Link>
         </div>
-        <div className="flex h-[416px] gap-2 overflow-hidden rounded-lg">
+        <div className="mb-4 flex h-[416px] gap-2 overflow-hidden rounded-lg">
           <div className="flex">
-            <Image src={item.gallery[0]} alt="" className="h-full w-[636px]" />
+            <Image
+              width={100}
+              height={100}
+              src={item.gallery[0]}
+              alt=""
+              className="h-full w-[636px]"
+            />
           </div>
-          <div className="flex flex-col gap-2">
+          <div className="flex w-[40vw] flex-col gap-2">
             <div className="flex gap-2">
-              <Image src={item.gallery[1]} alt="" className="h-full" />
-              <Image src={item.gallery[2]} alt="" className="h-full" />
+              <Image
+                width={100}
+                height={100}
+                src={item.gallery[1]}
+                alt=""
+                className="h-full w-full"
+              />
+              <Image
+                width={100}
+                height={100}
+                src={item.gallery[2]}
+                alt=""
+                className="h-full w-full"
+              />
             </div>
             <div className="flex gap-2">
-              <Image src={item.gallery[3]} alt="" className="h-full" />
-              <Image src={item.gallery[4]} alt="" className="h-full" />
-              <Image src={item.gallery[5]} alt="" className="h-full" />
+              <Image
+                width={100}
+                height={100}
+                src={item.gallery[3]}
+                alt=""
+                className="h-full w-full"
+              />
+              <Image
+                width={100}
+                height={100}
+                src={item.gallery[4]}
+                alt=""
+                className="h-full w-full"
+              />
+              <Image
+                width={100}
+                height={100}
+                src={item.gallery[5]}
+                alt=""
+                className="h-full w-full"
+              />
             </div>
           </div>
         </div>

@@ -40,6 +40,8 @@ const Slider = ({ images, start, onClose }) => {
             >
               {index === current && (
                 <Image
+                  width={100}
+                  height={100}
                   src={image}
                   alt="restaurant"
                   className="h-[504px] w-full rounded-b-lg object-fill"

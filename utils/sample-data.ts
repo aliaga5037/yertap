@@ -1,11 +1,11 @@
-import { User, Restaurant } from '@interfaces/index';
+import { User, Restaurant } from 'types/index';
 
 /** Dummy user data. */
 export const sampleUserData: User[] = [
-  { id: 101, name: 'Alice' },
-  { id: 102, name: 'Bob' },
-  { id: 103, name: 'Caroline' },
-  { id: 104, name: 'Dave' },
+  { id: 101, name: 'Alice', image: '/images/user.jpg' },
+  { id: 102, name: 'Bob', image: '/images/user.jpg' },
+  { id: 103, name: 'Caroline', image: '/images/user.jpg' },
+  { id: 104, name: 'Dave', image: '/images/user.jpg' },
 ];
 
 export const sampleRestaurantData: Restaurant[] = [
@@ -53,6 +53,43 @@ export const sampleRestaurantData: Restaurant[] = [
       { title: 'Washing-Stand', icon: '' },
       { title: 'Every Hour Cleaning', icon: '' },
     ],
+    review: {
+      average: 4.5,
+      count: 2759,
+      stars: {
+        5: 1350,
+        4: 890,
+        3: 500,
+        2: 60,
+        1: 18,
+      },
+      items: [
+        {
+          id: 1,
+          user: {
+            id: 1,
+            name: 'John Doe',
+            image: '/images/user.jpg',
+          },
+          rating: 4.5,
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam massa, eget aliquam nisl nunc vel nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam massa, eget aliquam nisl nunc vel nisl.',
+          date: '2020-01-01',
+          claps: 10,
+        },
+        {
+          id: 2,
+          user: {
+            id: 1,
+            name: 'John Doe',
+            image: '/images/user.jpg',
+          },
+          rating: 4,
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam massa, eget aliquam nisl nunc vel nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam massa, eget aliquam nisl nunc vel nisl.',
+          date: '2020-01-01',
+          claps: 5,
+        },
+      ],
+    },
   },
   {
     id: 2,

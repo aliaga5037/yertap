@@ -59,7 +59,9 @@ const Gallery = ({ item }) => {
               key={image}
             >
               <Image
-                className="h-full w-full object-cover"
+                width={285}
+                height={240}
+                className="h-full object-cover"
                 src={image}
                 alt="image"
               />

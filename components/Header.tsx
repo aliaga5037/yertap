@@ -47,7 +47,7 @@ export const Header: React.FC = () => {
             <Ellipse alt="ellipse" className="absolute top-0.5 left-2.5" />
           </span>
           <span className="ml-11">
-            <Avatar />
+            <Avatar user={{ id: 1, name: 'John Doe', image: '' }} />
           </span>
         </div>
       </div>
