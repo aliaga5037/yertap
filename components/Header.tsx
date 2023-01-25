@@ -8,6 +8,7 @@ import BrandLogo from 'Icons/yertap.svg';
 import LangIcon from 'Icons/lang.svg';
 import BellIcon from 'Icons/bell.svg';
 import Ellipse from 'Icons/ellipse.svg';
+import Link from 'next/link';
 
 const top100Films = [
   { title: 'The Shawshank Redemption', year: 1994 },
@@ -24,7 +25,9 @@ export const Header: React.FC = () => {
     <header className="border-b border-gray-light1 py-5 px-[120px]">
       <div className="flex items-center justify-between">
         <div className="flex items-center">
-          <BrandLogo alt="Yertap" className="mr-10" />
+          <Link href="/">
+            <BrandLogo alt="Yertap" className="mr-10" />
+          </Link>
           <Dropdown title="Categories" className="mr-1" />
           <Dropdown title="City" className="mr-1" />
           <Dropdown title="District" className="mr-1" />
