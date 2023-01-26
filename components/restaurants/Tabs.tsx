@@ -77,11 +77,14 @@ export default function BasicTabs({ item }) {
           <Highlights items={item.highlights} />
         </TabPanel>
         <TabPanel value={value} index={3}>
-          <Reviews review={item.review} place={{
-            title: item.title,
-            type: item.type,
-            image: item.image,
-          }} />
+          <Reviews
+            review={item.review}
+            place={{
+              title: item.title,
+              type: item.type,
+              image: item.image,
+            }}
+          />
         </TabPanel>
         <TabPanel value={value} index={4}>
           Item Three
@@ -100,6 +103,7 @@ export default function BasicTabs({ item }) {
             tags={[]}
             marked={false}
             className="w-[269px]"
+            sponsored
           />
           <Card
             id={2}
@@ -113,6 +117,7 @@ export default function BasicTabs({ item }) {
             tags={[]}
             marked={false}
             className="w-[269px]"
+            sponsored
           />
         </div>
       </div>

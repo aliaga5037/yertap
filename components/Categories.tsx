@@ -29,7 +29,7 @@ const Categories = ({ categories }: CategoriesProps) => {
             height={24}
             src={category.icon}
             alt={category.title}
-            className="mr-4"
+            className="mr-4 h-auto w-auto"
           />
           <span>{category.title}</span>
 

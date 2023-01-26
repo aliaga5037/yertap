@@ -6,6 +6,7 @@ import StarIcon from 'Icons/star.svg';
 import ShareIcon from 'Icons/share.svg';
 import BookmarkIcon from 'Icons/bookmark';
 import Link from 'next/link';
+import Badge from './Badge';
 
 interface CardProps {
   title: string;
@@ -19,6 +20,7 @@ interface CardProps {
   image: string;
   className?: string;
   id: number;
+  sponsored?: boolean;
 }
 
 const Card = ({
@@ -30,12 +32,21 @@ const Card = ({
   image,
   className,
   id,
+  sponsored,
 }: CardProps) => {
   return (
     <Link
       href={`/restaurants/${id}`}
-      className={`mb-10 flex flex-col ${className ?? ''}`}
+      className={`relative mb-10 flex flex-col ${className ?? ''}`}
     >
+      {sponsored && (
+        <Badge
+          className="absolute top-3 left-3 mb-3 rounded-lg px-2 py-0"
+          text="Sponsored"
+          color="gray"
+          type="full"
+        />
+      )}
       <Image
         className="mb-3 rounded-lg"
         width={285}

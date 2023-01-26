@@ -102,7 +102,7 @@ export const sampleRestaurantData: Restaurant[] = [
   },
   {
     id: 3,
-    title: 'Starbucks',
+    title: 'Gloria Jeans',
     type: 'Coffee',
     marked: true,
     rating: { average: 4.1, count: 259 },
@@ -111,7 +111,7 @@ export const sampleRestaurantData: Restaurant[] = [
   },
   {
     id: 4,
-    title: 'Vapiano',
+    title: 'Burger King',
     type: 'Restaurant',
     marked: true,
     rating: { average: 4.5, count: 2759 },
@@ -120,7 +120,7 @@ export const sampleRestaurantData: Restaurant[] = [
   },
   {
     id: 5,
-    title: 'Starbucks',
+    title: 'Fuzzy',
     type: 'Coffee',
     marked: false,
     rating: { average: 4.1, count: 259 },
@@ -129,7 +129,7 @@ export const sampleRestaurantData: Restaurant[] = [
   },
   {
     id: 6,
-    title: 'Starbucks',
+    title: 'United Coffee',
     type: 'Coffee',
     marked: false,
     rating: { average: 4.1, count: 259 },
@@ -138,7 +138,7 @@ export const sampleRestaurantData: Restaurant[] = [
   },
   {
     id: 7,
-    title: 'Vapiano',
+    title: 'Oz Sut',
     type: 'Restaurant',
     marked: true,
     rating: { average: 4.5, count: 2759 },
@@ -147,7 +147,7 @@ export const sampleRestaurantData: Restaurant[] = [
   },
   {
     id: 8,
-    title: 'Starbucks',
+    title: 'Coffee House',
     type: 'Coffee',
     marked: false,
     rating: { average: 4.1, count: 259 },
@@ -156,7 +156,7 @@ export const sampleRestaurantData: Restaurant[] = [
   },
   {
     id: 9,
-    title: 'Vapiano',
+    title: 'Taco Bell',
     type: 'Restaurant',
     marked: true,
     rating: { average: 4.5, count: 2759 },
@@ -165,7 +165,7 @@ export const sampleRestaurantData: Restaurant[] = [
   },
   {
     id: 10,
-    title: 'Starbucks',
+    title: 'Coffee Go',
     type: 'Coffee',
     marked: false,
     rating: { average: 4.1, count: 259 },

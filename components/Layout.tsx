@@ -5,6 +5,7 @@ import Footer from '@components/Footer';
 import Categories from '@components/Categories';
 import BookmarkIcon from 'Icons/bookmark';
 import FeatherIcon from 'Icons/feather.svg';
+import Link from 'next/link';
 
 const categories = [
   {
@@ -46,7 +47,9 @@ const Layout = ({
       {!hideSidebar && (
         <div className="flex flex-col">
           <div className="flex w-[260px] cursor-pointer flex-row rounded-lg bg-purple-light1 px-4 py-3 text-sm font-medium leading-2 text-purple-dark1">
-            <FeatherIcon className="mr-5" /> Review
+            <Link href="/reviews" className="flex">
+              <FeatherIcon className="mr-5" /> Review
+            </Link>
           </div>
           <div className="group flex w-[260px] cursor-pointer flex-row rounded-lg px-4 py-3 text-sm font-medium leading-2 text-gray-base hover:bg-purple-light1 hover:text-purple-dark1">
             <BookmarkIcon className="mr-5" />
