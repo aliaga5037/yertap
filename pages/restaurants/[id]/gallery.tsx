@@ -91,7 +91,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const item = sampleRestaurantData.find(
     (data) => data.id === Number(context.params.id)
   );
-  console.log(item);
+
   return {
     props: {
       item,

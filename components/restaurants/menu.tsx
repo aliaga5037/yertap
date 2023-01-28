@@ -52,7 +52,14 @@ const Menu = ({ menuItems }) => {
               <span className="mb-4 text-2xl font-normal leading-5 text-black">
                 {menu.type}
               </span>
-              <Accordion title={menu.title} items={menu.items} />
+              {menu.foodTypes.map((foodType) => (
+                <Accordion
+                  key={foodType.id}
+                  title={foodType.title}
+                  items={foodType.items}
+                  className="mb-2"
+                />
+              ))}
             </>
           ))}
         </div>

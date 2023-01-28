@@ -9,6 +9,7 @@ import LangIcon from 'Icons/lang.svg';
 import BellIcon from 'Icons/bell.svg';
 import Ellipse from 'Icons/ellipse.svg';
 import Link from 'next/link';
+import NotificationsPopup from './NotificationsPopup';
 
 const top100Films = [
   { title: 'The Shawshank Redemption', year: 1994 },
@@ -18,6 +19,35 @@ const top100Films = [
   { title: '12 Angry Men', year: 1957 },
   { title: "Schindler's List", year: 1993 },
   { title: 'Pulp Fiction', year: 1994 },
+];
+
+const items = [
+  {
+    id: 1,
+    type: 'review',
+    user: {
+      id: 1,
+      name: 'John Doe',
+      image: '/images/user.jpg',
+    },
+    title: 'John clapped your Review!',
+    text: `Looking for low prices? We've got an entire page dedicated to finding you fantastic deals in your favorite places.`,
+    viewed: false,
+    date: '9 m',
+  },
+  {
+    id: 2,
+    type: 'review',
+    user: {
+      id: 1,
+      name: 'John Doe',
+      image: '/images/user.jpg',
+    },
+    title: 'John clapped your Review!',
+    text: `Looking for low prices? We've got an entire page dedicated to finding you fantastic deals in your favorite places.`,
+    viewed: true,
+    date: '32 m',
+  },
 ];
 
 export const Header: React.FC = () => {
@@ -45,9 +75,16 @@ export const Header: React.FC = () => {
           <button className="flex flex-row items-center">
             <LangIcon alt="lang" className="mr-2.5" /> Az
           </button>
-          <span className="relative ml-8 flex  items-center">
-            <BellIcon alt="bell" />
-            <Ellipse alt="ellipse" className="absolute top-0.5 left-2.5" />
+          <span className="group relative ml-8 flex items-center">
+            <BellIcon alt="bell" className="cursor-pointer" />
+            <Ellipse
+              alt="ellipse"
+              className="absolute top-0.5 left-2.5 cursor-pointer"
+            />
+
+            <div className="absolute -right-20 top-11 z-10 scale-0 transition-all delay-300 ease-in-out group-hover:scale-100">
+              <NotificationsPopup items={items} />
+            </div>
           </span>
           <span className="ml-11">
             <Avatar user={{ id: 1, name: 'John Doe', image: '' }} />

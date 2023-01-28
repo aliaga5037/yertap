@@ -28,21 +28,46 @@ export const sampleRestaurantData: Restaurant[] = [
     menu: [
       {
         type: 'European Cuisine',
-        title: 'Pizza',
-        items: [
+        foodTypes: [
           {
-            title: 'Grill Chicken Parmesan',
-            description:
-              'Garlic Parmesan Sauce, Grilled chicken, ham, tomato, mozzarella cheese, jalapeno',
-            price: '15.99 ₼',
-            image: '/images/grill_chicken.jpg',
+            id: 1,
+            title: 'Pizza',
+            items: [
+              {
+                title: 'Grill Chicken Parmesan',
+                description:
+                  'Garlic Parmesan Sauce, Grilled chicken, ham, tomato, mozzarella cheese, jalapeno',
+                price: '15.99 ₼',
+                image: '/images/grill_chicken.jpg',
+              },
+              {
+                title: 'American Hot',
+                description:
+                  'Tomato Sauce, Mozzarella, Pepperoni and Jalapeno peppers',
+                price: '13.99 ₼',
+                image: '/images/american_hot.jpg',
+              },
+            ],
           },
           {
-            title: 'American Hot',
-            description:
-              'Tomato Sauce, Mozzarella, Pepperoni and Jalapeno peppers',
-            price: '13.99 ₼',
-            image: '/images/american_hot.jpg',
+            id: 1,
+            title: 'Pasta',
+            items: [
+              {
+                title: 'Grill Chicken Parmesan',
+                description:
+                  'Garlic Parmesan Sauce, Grilled chicken, ham, tomato, mozzarella cheese, jalapeno',
+                price: '15.99 ₼',
+                image: '/images/grill_chicken.jpg',
+              },
+              {
+                title: 'American Hot',
+                description:
+                  'Tomato Sauce, Mozzarella, Pepperoni and Jalapeno peppers',
+                price: '13.99 ₼',
+                image: '/images/american_hot.jpg',
+              },
+            ],
           },
         ],
       },

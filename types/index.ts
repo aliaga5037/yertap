@@ -43,12 +43,15 @@ export type Restaurant = {
   tags: string[];
   gallery?: string[];
   menu?: {
-    title: string;
-    items: {
+    foodTypes: {
+      id: number;
       title: string;
-      price: string;
-      description: string;
-      image: string;
+      items: {
+        title: string;
+        price: string;
+        description: string;
+        image: string;
+      }[];
     }[];
     type: string;
   }[];

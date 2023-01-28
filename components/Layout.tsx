@@ -46,15 +46,19 @@ const Layout = ({
     <main className="flex flex-row px-[120px] py-6">
       {!hideSidebar && (
         <div className="flex flex-col">
-          <div className="flex w-[260px] cursor-pointer flex-row rounded-lg bg-purple-light1 px-4 py-3 text-sm font-medium leading-2 text-purple-dark1">
-            <Link href="/reviews" className="flex">
-              <FeatherIcon className="mr-5" /> Review
-            </Link>
-          </div>
-          <div className="group flex w-[260px] cursor-pointer flex-row rounded-lg px-4 py-3 text-sm font-medium leading-2 text-gray-base hover:bg-purple-light1 hover:text-purple-dark1">
+          <Link
+            href="/reviews"
+            className="flex w-[260px] cursor-pointer flex-row rounded-lg bg-purple-light1 px-4 py-3 text-sm font-medium leading-2 text-purple-dark1"
+          >
+            <FeatherIcon className="mr-5" /> Review
+          </Link>
+          <Link
+            href="/saved"
+            className="group flex w-[260px] cursor-pointer flex-row rounded-lg px-4 py-3 text-sm font-medium leading-2 text-gray-base hover:bg-purple-light1 hover:text-purple-dark1"
+          >
             <BookmarkIcon className="mr-5" />
             Save List
-          </div>
+          </Link>
           <hr className="my-5 h-0.5 rounded-lg bg-gray-light2" />
           <Categories categories={categories} />
         </div>
