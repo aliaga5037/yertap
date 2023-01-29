@@ -1,18 +1,18 @@
 import React, { useEffect, useState, useId } from 'react';
-import ArrowIcon from 'Icons/arrow';
 
 interface DropDownProps {
   title: string | JSX.Element;
   className?: string;
   btnClass?: string;
   fullWidth?: boolean;
+  children: JSX.Element | JSX.Element[];
 }
 
 export const Dropdown = ({
   title,
   className,
   btnClass,
-  fullWidth,
+  children,
 }: DropDownProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const id = useId();
@@ -34,36 +34,25 @@ export const Dropdown = ({
   return (
     <div className={`relative ${className}`} id={id}>
       <button
-        className={`flex flex-row items-center justify-between 
-        rounded-lg bg-gray-light1 px-4 py-2.5 
-        text-sm font-medium text-gray-dark3 hover:bg-gray-50 ${
-          fullWidth ? 'w-full' : ''
-        } ${btnClass}`}
+        className={`flex w-full flex-row items-center 
+        justify-between rounded-lg bg-gray-light1 px-4 
+        py-2.5 text-sm font-medium text-gray-dark3 hover:bg-gray-50 ${btnClass}`}
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="mr-2">{title}</span>
-        <ArrowIcon alt="arrow" className={`${isOpen ? '' : '-rotate-90'}`} />
-      </button>
-      {isOpen && (
-        <div
-          className={`absolute top-10 overflow-hidden right-0 z-10 mt-2 rounded-md bg-white shadow-xl ${
-            fullWidth ? 'w-full' : 'w-32'
+        <i
+          className={`icon icon-arrow flex text-[8px] transition-all delay-150 ease-linear ${
+            isOpen ? '' : '-rotate-90'
           }`}
-        >
-          <a
-            href="#"
-            className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-600 hover:text-white"
-          >
-            English
-          </a>
-          <a
-            href="#"
-            className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-600 hover:text-white"
-          >
-            Russian
-          </a>
-        </div>
-      )}
+        />
+      </button>
+      <div
+        className={`absolute z-10 w-full scale-y-0 transition-all delay-150 ease-in-out ${
+          isOpen && 'origin-top scale-y-100'
+        }`}
+      >
+        {children}
+      </div>
     </div>
   );
 };

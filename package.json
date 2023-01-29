@@ -5,7 +5,8 @@
     "build": "next build",
     "start": "next start",
     "type-check": "tsc",
-    "generateIcons": "fantasticon my-icons -o icon-dist"
+    "generateIcons": "fantasticon ./assets/icons/converted -o ./assets/icon-dist --normalize true",
+    "oslllo-svg-fixer": "node node_modules/oslllo-svg-fixer/src/cli.js -s ./assets/icons/raw -d ./assets/icons/converted"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -17,6 +18,7 @@
     "@reduxjs/toolkit": "^1.9.1",
     "@svgr/webpack": "^6.5.1",
     "next": "latest",
+    "oslllo-svg-fixer": "^2.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5"

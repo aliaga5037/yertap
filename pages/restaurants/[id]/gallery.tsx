@@ -4,7 +4,6 @@ import Layout from '@components/Layout';
 import Slider from '@components/Slider';
 import { sampleRestaurantData } from '@utils/sample-data';
 
-import ArrowIcon from 'Icons/arrow';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -32,14 +31,14 @@ const Gallery = ({ item }) => {
           >
             Restaurants
           </Link>
-          <ArrowIcon className="-rotate-90 " />
+          <i className="icon icon-arrow flex -rotate-90 text-[8px] text-gray-light6 " />
           <Link
             href={`/restaurants/${item.id}`}
             className="text-sm font-medium leading-2 text-gray-light6 underline"
           >
             {item.title}
           </Link>
-          <ArrowIcon className="-rotate-90 " />
+          <i className="icon icon-arrow flex -rotate-90 text-[8px] text-gray-light6 " />
           <a
             href="#"
             className="text-sm font-medium leading-2 text-gray-light6"
@@ -61,7 +60,7 @@ const Gallery = ({ item }) => {
               <Image
                 width={285}
                 height={240}
-                className="h-full object-cover"
+                className="h-[240px] w-[285px] object-cover"
                 src={image}
                 alt="image"
               />

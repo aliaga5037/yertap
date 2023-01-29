@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 
-const Accordion = ({ title, items, className }) => {
+const Accordion = ({ title, items, className, icon }) => {
   const [expanded, setExpanded] = useState<boolean>(false);
 
   const toggleExpand = () => {
@@ -17,11 +17,18 @@ const Accordion = ({ title, items, className }) => {
         onClick={toggleExpand}
       >
         <span
-          className={`text-base font-medium leading-3 ${
+          className={`flex w-full items-center text-base font-medium leading-3 ${
             expanded ? 'text-gray-light0' : 'text-gray-dark3'
           }`}
         >
+          <i className={`icon icon-${icon} mr-4 flex text-inherit`} />
+
           {title}
+          <i
+            className={`icon icon-arrow ml-auto flex text-[8px] text-inherit ${
+              expanded ? 'rotate-180' : ''
+            }`}
+          />
         </span>
       </div>
 

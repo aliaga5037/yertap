@@ -2,9 +2,6 @@ import Image from 'next/image';
 import React from 'react';
 import Tag from './Tag';
 
-import StarIcon from 'Icons/star.svg';
-import ShareIcon from 'Icons/share.svg';
-import BookmarkIcon from 'Icons/bookmark';
 import Link from 'next/link';
 import Badge from './Badge';
 
@@ -57,16 +54,16 @@ const Card = ({
       />
       <div className="mb-4 flex items-center justify-between">
         <div className="flex">
-          <StarIcon className="mr-2" />
+          <i className="icon icon-star mr-2 flex text-xl" />
           <span className="mr-2">{rating.average}</span>
           <span>({rating.count.toLocaleString()})</span>
         </div>
         <div className="flex items-center">
-          <ShareIcon className="mr-4 cursor-pointer" />
-          <BookmarkIcon
-            className="cursor-pointer"
-            fill={`${marked ? 'black' : 'transparent'}`}
-            strokeColor="black"
+          <i className="icon icon-share mr-4 flex cursor-pointer text-2xl" />
+          <i
+            className={`icon icon-bookmark${
+              marked ? '-marked' : ''
+            } flex cursor-pointer text-2xl`}
           />
         </div>
       </div>

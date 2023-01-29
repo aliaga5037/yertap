@@ -1,15 +1,29 @@
-import { useState } from 'react';
-import Dropdown from './Dropdown';
-
-import FilterIcon from 'Icons/filter.svg';
-import PinIcon from 'Icons/pin.svg';
-import ArrowIcon from 'Icons/arrow';
-import CloseIcon from 'Icons/close.svg';
+import { useEffect, useState } from 'react';
+import LocationFilter from './filters/locationFilter';
+import PriceFilter from './filters/priceFilter';
 
 const Filter = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (isOpen) {
+        const target = event.target as HTMLElement;
+        if (!target.closest('.filter')) {
+          setIsOpen(false);
+        }
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [isOpen]);
+
   return (
-    <div className="relative">
+    <div className="relative filter">
       <div
         className={`flex cursor-pointer items-center
       rounded-lg bg-gray-light1 
@@ -17,7 +31,7 @@ const Filter = () => {
       leading-[18px] text-gray-dark3`}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <FilterIcon className="mr-1.5" />
+        <i className="icon icon-filter mr-1.5 flex" />
         Filter
       </div>
       {isOpen && (
@@ -27,26 +41,18 @@ const Filter = () => {
           </div>
 
           <div className="flex flex-col border-y border-gray-light3 py-9 px-[60px]">
-            <div>
-              <span className="-ml-6 mb-4 flex items-center text-base font-medium leading-[16px] tracking-[0.6px] text-gray-dark3 ">
-                <PinIcon className="mr-3" /> Location
-              </span>
-
-              <div className="mb-2 text-xs font-medium leading-1 tracking-[0.2px] text-gray-base">
-                City
-              </div>
-              <Dropdown title={
-                <></>
-              } fullWidth className="mr-1" />
-            </div>
+            <LocationFilter />
+            <span className="mb-8"></span>
+            <PriceFilter />
           </div>
 
           <div className="flex justify-end p-6">
             <button className="flex items-center text-sm font-medium leading-1 tracking-wide text-gray-dark3">
-              <CloseIcon className="mr-1.5" /> Clear
+              <i className="icon icon-close mr-1.5 flex" /> Clear
             </button>
             <button className="ml-6 flex items-center justify-center rounded-lg bg-gray-light1 px-3 py-2 text-sm font-medium leading-1 tracking-[0.4px] text-gray-dark3">
-              Show 234 Results <ArrowIcon className="ml-2 -rotate-90" />
+              Show 234 Results{' '}
+              <i className="icon icon-arrow ml-2 flex -rotate-90 text-[8px]" />
             </button>
           </div>
         </div>

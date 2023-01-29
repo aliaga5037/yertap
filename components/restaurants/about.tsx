@@ -11,8 +11,13 @@ const About = () => {
           <span className="mb-4 text-xl font-bold leading-4 text-black">
             Contact:
           </span>
-          <span className="text-base font-medium leading-3 text-black">
+          <span className="flex items-center text-base font-medium leading-3 text-black mb-3">
+            <i className="icon icon-more mr-3 flex text-xl" />
             vapiano.com
+          </span>
+          <span className="flex items-center text-base font-medium leading-3 text-black">
+            <i className="icon icon-more mr-3 flex text-xl" />
+            support@vapiano.com
           </span>
         </div>
         <div className="flex flex-col">

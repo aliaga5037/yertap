@@ -32,6 +32,7 @@ export const sampleRestaurantData: Restaurant[] = [
           {
             id: 1,
             title: 'Pizza',
+            icon: 'pizza',
             items: [
               {
                 title: 'Grill Chicken Parmesan',
@@ -52,6 +53,7 @@ export const sampleRestaurantData: Restaurant[] = [
           {
             id: 1,
             title: 'Pasta',
+            icon: 'plate',
             items: [
               {
                 title: 'Grill Chicken Parmesan',
@@ -196,5 +198,78 @@ export const sampleRestaurantData: Restaurant[] = [
     rating: { average: 4.1, count: 259 },
     image: '/images/starbucks.jpg',
     tags: ['Coffee', 'Tea', 'Cakes'],
+  },
+];
+
+export const categories = [
+  {
+    id: 1,
+    title: 'Food',
+    slug: 'food',
+    icon: 'food',
+    isAvailable: true,
+  },
+  {
+    id: 2,
+    title: 'Travel',
+    slug: 'travel',
+    icon: 'travel',
+    isAvailable: false,
+  },
+  {
+    id: 3,
+    title: 'Shopping',
+    slug: 'shopping',
+    icon: 'shop',
+    isAvailable: false,
+  },
+  {
+    id: 4,
+    title: 'Home Service',
+    slug: 'home-service',
+    icon: 'home',
+    isAvailable: false,
+  },
+  {
+    id: 5,
+    title: 'Auto Service',
+    slug: 'auto-service',
+    icon: 'car',
+    isAvailable: false,
+  },
+  {
+    id: 6,
+    title: 'Fitness',
+    slug: 'fitness',
+    icon: 'ball',
+    isAvailable: false,
+  },
+  {
+    id: 7,
+    title: 'Education',
+    slug: 'education',
+    icon: 'book',
+    isAvailable: false,
+  },
+  {
+    id: 8,
+    title: 'Health',
+    slug: 'health',
+    icon: 'health',
+    isAvailable: false,
+  },
+  {
+    id: 9,
+    title: 'Personal Care',
+    slug: 'personal-care',
+    icon: 'care',
+    isAvailable: false,
+  },
+  {
+    id: 10,
+    title: 'Pets',
+    slug: 'pets',
+    icon: 'pet',
+    isAvailable: false,
   },
 ];

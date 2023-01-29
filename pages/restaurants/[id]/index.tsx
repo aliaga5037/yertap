@@ -5,8 +5,6 @@ import Badge from '@components/Badge';
 import Tabs from '@components/restaurants/Tabs';
 
 import ArrowIcon from 'Icons/arrow';
-import StartIcon from 'Icons/star.svg';
-import PhotoIcon from 'Icons/photo.svg';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -33,7 +31,7 @@ const Details = ({ item }) => {
           {item.title}
         </h1>
         <div className="mb-3 flex items-center">
-          <StartIcon className="mr-3" />
+          <i className="icon icon-star mr-3 flex" />
           <span>
             {item.rating.average} ({item.rating.count})
           </span>
@@ -62,7 +60,7 @@ const Details = ({ item }) => {
             href={`/restaurants/${item.id}/gallery`}
             className="flex items-center justify-between gap-1.5 rounded-lg bg-gray-light1 px-3 py-2 text-sm font-medium leading-1"
           >
-            <PhotoIcon />
+            <i className="icon icon-photo flex " />
             Show All (32) Photos
           </Link>
         </div>
@@ -136,7 +134,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const item = sampleRestaurantData.find(
     (data) => data.id === Number(context.params.id)
   );
-  
+
   return {
     props: {
       item,

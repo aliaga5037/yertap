@@ -1,6 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
-import SoonIcon from 'Icons/soon.svg';
+import Badge from './Badge';
 
 interface Category {
   id: number;
@@ -20,20 +19,16 @@ const Categories = ({ categories }: CategoriesProps) => {
       {categories.map((category) => (
         <div
           key={category.id}
-          className={`flex w-[260px] cursor-pointer flex-row 
+          className={`flex w-full cursor-pointer flex-row 
           items-center rounded-lg px-4 py-3 text-sm font-medium leading-2 
           text-gray-base hover:bg-purple-light1 hover:text-purple-dark1`}
         >
-          <Image
-            width={24}
-            height={24}
-            src={category.icon}
-            alt={category.title}
-            className="mr-4 h-auto w-auto"
-          />
+          <i className={`icon icon-${category.icon} text-2xl mr-4 flex`} />
           <span>{category.title}</span>
 
-          {!category.isAvailable && <SoonIcon alt="soon" className="ml-auto" />}
+          {!category.isAvailable && (
+            <Badge className="ml-auto !py-0" text="Soon" type="border" />
+          )}
         </div>
       ))}
     </div>

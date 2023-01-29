@@ -12,16 +12,21 @@ const Menu = ({ menuItems }) => {
           <span className="mb-4 text-xl font-bold leading-3 text-gray-dark2">
             Cuisines:
           </span>
-          <span className="text-base font-medium leading-3 text-gray-dark2">
+          <span className="mb-4 flex items-center text-base font-medium leading-3 text-gray-dark2">
+            <i className="icon icon-plate mr-3 flex text-lg" />
             National
           </span>
-          <span className="text-base font-medium leading-3 text-gray-dark2">
+          <span className="mb-4 flex items-center text-base font-medium leading-3 text-gray-dark2">
+            <i className="icon icon-plate mr-3 flex text-lg" />
             European
           </span>
-          <span className="text-base font-medium leading-3 text-gray-dark2">
+          <span className="mb-4 flex items-center text-base font-medium leading-3 text-gray-dark2">
+            <i className="icon icon-plate mr-3 flex text-lg" />
             Asian
           </span>
-          <span className="text-base font-medium leading-3 text-gray-dark2">
+
+          <span className="flex items-center text-base font-medium leading-3 text-gray-dark2">
+            <i className="icon icon-plate mr-3 flex text-lg" />
             Mexican
           </span>
         </div>
@@ -30,16 +35,20 @@ const Menu = ({ menuItems }) => {
           <span className="mb-4 text-xl font-bold leading-3 text-gray-dark2">
             Food Type:
           </span>
-          <span className="text-base font-medium leading-3 text-gray-dark2">
+          <span className="mb-4 flex items-center text-base font-medium leading-3 text-gray-dark2">
+            <i className="icon icon-egg mr-3 flex text-xl" />
             Breakfast
           </span>
-          <span className="text-base font-medium leading-3 text-gray-dark2">
+          <span className="mb-4 flex items-center text-base font-medium leading-3 text-gray-dark2">
+            <i className="icon icon-food mr-3 flex text-xl" />
             Lunch
           </span>
-          <span className="text-base font-medium leading-3 text-gray-dark2">
+          <span className="mb-4 flex items-center text-base font-medium leading-3 text-gray-dark2">
+            <i className="icon icon-plate mr-3 flex text-lg" />
             Diner
           </span>
-          <span className="text-base font-medium leading-3 text-gray-light4">
+          <span className="mb-4 flex items-center text-base font-medium leading-3 text-gray-light4">
+            <i className="icon icon-food mr-3 flex text-xl" />
             Business Lunch
           </span>
         </div>
@@ -56,6 +65,7 @@ const Menu = ({ menuItems }) => {
                 <Accordion
                   key={foodType.id}
                   title={foodType.title}
+                  icon={foodType.icon}
                   items={foodType.items}
                   className="mb-2"
                 />

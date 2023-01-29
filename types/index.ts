@@ -46,6 +46,7 @@ export type Restaurant = {
     foodTypes: {
       id: number;
       title: string;
+      icon: string;
       items: {
         title: string;
         price: string;

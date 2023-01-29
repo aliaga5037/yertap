@@ -1,0 +1,144 @@
+@font-face {
+    font-family: "icons";
+    src: url("./icons.eot?31348a19fad471bddbe24871122ed15b#iefix") format("embedded-opentype"),
+url("./icons.woff2?31348a19fad471bddbe24871122ed15b") format("woff2"),
+url("./icons.woff?31348a19fad471bddbe24871122ed15b") format("woff");
+}
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+    font-family: icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-all:before {
+    content: "\f101";
+}
+.icon-arrow:before {
+    content: "\f102";
+}
+.icon-ball:before {
+    content: "\f103";
+}
+.icon-bell:before {
+    content: "\f104";
+}
+.icon-book:before {
+    content: "\f105";
+}
+.icon-bookmark-marked:before {
+    content: "\f106";
+}
+.icon-bookmark:before {
+    content: "\f107";
+}
+.icon-burger:before {
+    content: "\f108";
+}
+.icon-business_lunch:before {
+    content: "\f109";
+}
+.icon-car:before {
+    content: "\f10a";
+}
+.icon-care:before {
+    content: "\f10b";
+}
+.icon-check:before {
+    content: "\f10c";
+}
+.icon-clap:before {
+    content: "\f10d";
+}
+.icon-close:before {
+    content: "\f10e";
+}
+.icon-date:before {
+    content: "\f10f";
+}
+.icon-egg:before {
+    content: "\f110";
+}
+.icon-ellipse:before {
+    content: "\f111";
+}
+.icon-feather:before {
+    content: "\f112";
+}
+.icon-filter:before {
+    content: "\f113";
+}
+.icon-food:before {
+    content: "\f114";
+}
+.icon-gps:before {
+    content: "\f115";
+}
+.icon-health:before {
+    content: "\f116";
+}
+.icon-home:before {
+    content: "\f117";
+}
+.icon-lang:before {
+    content: "\f118";
+}
+.icon-load:before {
+    content: "\f119";
+}
+.icon-logo:before {
+    content: "\f11a";
+}
+.icon-money_bag:before {
+    content: "\f11b";
+}
+.icon-more:before {
+    content: "\f11c";
+}
+.icon-pet:before {
+    content: "\f11d";
+}
+.icon-photo:before {
+    content: "\f11e";
+}
+.icon-pin:before {
+    content: "\f11f";
+}
+.icon-pizza:before {
+    content: "\f120";
+}
+.icon-plate:before {
+    content: "\f121";
+}
+.icon-price:before {
+    content: "\f122";
+}
+.icon-reply:before {
+    content: "\f123";
+}
+.icon-search:before {
+    content: "\f124";
+}
+.icon-share:before {
+    content: "\f125";
+}
+.icon-shop:before {
+    content: "\f126";
+}
+.icon-star:before {
+    content: "\f127";
+}
+.icon-steak:before {
+    content: "\f128";
+}
+.icon-travel:before {
+    content: "\f129";
+}
+.icon-user:before {
+    content: "\f12a";
+}

@@ -1,14 +1,8 @@
 import Image from 'next/image';
-import StarIcon from 'Icons/star.svg';
 import type { Review } from 'types';
 import HoverRating from '@components/HoverRating';
 import TextRating from '@components/TextRating';
 import Avatar from '@components/Avatar';
-
-import UserIcon from 'Icons/user.svg';
-import ClapIcon from 'Icons/clap.svg';
-import ShareIcon from 'Icons/share.svg';
-import ReplyIcon from 'Icons/reply.svg';
 
 const Reviews = ({
   review,
@@ -41,7 +35,7 @@ const Reviews = ({
         </div>
 
         <div className="ml-auto flex">
-          <StarIcon className="mr-2" />
+          <i className="icon icon-star mr-2 flex" />
           <span className="mr-2">{review.average}</span>
           <span>({review.count.toLocaleString()})</span>
         </div>
@@ -52,7 +46,7 @@ const Reviews = ({
           .reverse()
           .map(([key, value]) => (
             <div key={key} className="mb-3 flex items-center">
-              <StarIcon className="mr-3" />
+              <i className="icon icon-star mr-3  flex" />
               <span className="mr-8">{key}</span>
               <div className="mr-10 h-1 w-[364px] rounded-[10px] bg-gray-light3">
                 <div
@@ -61,7 +55,7 @@ const Reviews = ({
                 ></div>
               </div>
               <span className="flex items-center gap-3">
-                <UserIcon />
+                <i className="icon icon-user flex" />
                 {value}
               </span>
             </div>
@@ -125,13 +119,13 @@ const Reviews = ({
           </div>
           <div className="flex justify-around">
             <div className="flex">
-              <ClapIcon className="mr-3" /> 24
+              <i className="icon icon-clap mr-3 flex" /> 24
             </div>
             <div className="flex">
-              <ReplyIcon className="mr-3" /> 10
+              <i className="icon icon-reply mr-3  flex" /> 10
             </div>
             <div>
-              <ShareIcon />
+              <i className="icon icon-share flex" />
             </div>
           </div>
         </div>

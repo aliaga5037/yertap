@@ -4,12 +4,11 @@ import Avatar from './Avatar';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import Stack from '@mui/material/Stack';
-import BrandLogo from 'Icons/yertap.svg';
-import LangIcon from 'Icons/lang.svg';
-import BellIcon from 'Icons/bell.svg';
-import Ellipse from 'Icons/ellipse.svg';
 import Link from 'next/link';
 import NotificationsPopup from './NotificationsPopup';
+import Categories from '@components/Categories';
+
+import { categories } from '@utils/sample-data';
 
 const top100Films = [
   { title: 'The Shawshank Redemption', year: 1994 },
@@ -55,12 +54,28 @@ export const Header: React.FC = () => {
     <header className="border-b border-gray-light1 py-5 px-[120px]">
       <div className="flex items-center justify-between">
         <div className="flex items-center">
-          <Link href="/">
-            <BrandLogo alt="Yertap" className="mr-10" />
+          <Link href="/" className="mr-10  flex">
+            <i className="icon icon-logo mr-3 flex text-3xl text-purple-base" />
+            <span className="text-3xl font-semibold leading-3 text-black">
+              Yertap
+            </span>
           </Link>
-          <Dropdown title="Categories" className="mr-1" />
-          <Dropdown title="City" className="mr-1" />
-          <Dropdown title="District" className="mr-1" />
+          <Dropdown title="Categories" className="mr-1">
+            <div className="w-[277px] mt-2 -ml-14 overflow-hidden rounded-lg border border-gray-light3 bg-white">
+              <div className="flex items-center border-b border-b-gray-light3 py-4 px-6">
+                <h1 className="text-base font-semibold leading-2 text-gray-base">
+                  Categories
+                </h1>
+              </div>
+              <div className="px-2 py-6">
+                <Categories categories={categories} />
+              </div>
+            </div>
+          </Dropdown>
+          <Dropdown title="City" className="mr-1">
+            <div>City</div>
+          </Dropdown>
+          {/* <Dropdown title="District" className="mr-1" /> */}
           <Stack spacing={2} sx={{ width: 300 }}>
             <Autocomplete
               id="free-solo-demo"
@@ -73,20 +88,17 @@ export const Header: React.FC = () => {
         </div>
         <div className="flex">
           <button className="flex flex-row items-center">
-            <LangIcon alt="lang" className="mr-2.5" /> Az
+            <i className="icon icon-lang mr-2 flex text-xl" /> Az
           </button>
           <span className="group relative ml-8 flex items-center">
-            <BellIcon alt="bell" className="cursor-pointer" />
-            <Ellipse
-              alt="ellipse"
-              className="absolute top-0.5 left-2.5 cursor-pointer"
-            />
+            <i className="icon icon-bell flex cursor-pointer text-xl" />
+            <i className="icon icon-ellipse absolute top-0.5 left-2.5 flex cursor-pointer text-purple-base" />
 
             <div className="absolute -right-20 top-11 z-10 scale-0 transition-all delay-300 ease-in-out group-hover:scale-100">
               <NotificationsPopup items={items} />
             </div>
           </span>
-          <span className="ml-11">
+          <span className="ml-11 cursor-pointer">
             <Avatar user={{ id: 1, name: 'John Doe', image: '' }} />
           </span>
         </div>

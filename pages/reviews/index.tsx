@@ -5,20 +5,11 @@ import Autocomplete from '@mui/material/Autocomplete';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 
-import FeatherIcon from 'Icons/feather.svg';
-import CloseIcon from 'Icons/close.svg';
-
 import { sampleRestaurantData } from '@utils/sample-data';
 import Image from 'next/image';
 import Avatar from '@components/Avatar';
 import TextRating from '@components/TextRating';
 import Tag from '@components/Tag';
-
-import ClapIcon from 'Icons/clap.svg';
-import ShareIcon from 'Icons/share.svg';
-import ReplyIcon from 'Icons/reply.svg';
-import DateIcon from 'Icons/date.svg';
-import StarIcon from 'Icons/star.svg';
 import Sponsored from '@components/Sponsored';
 
 const reviews = [
@@ -128,7 +119,7 @@ const Reviews = () => {
                       onClick={() => setSelected(null)}
                       className="ml-3 flex items-center text-sm font-medium leading-1 text-gray-dark2"
                     >
-                      <CloseIcon className="mr-2" /> Clear
+                      <i className="icon icon-close mr-2 flex" /> Clear
                     </button>
                   </div>
                 </div>
@@ -154,7 +145,7 @@ const Reviews = () => {
                 20 / 200
               </span>
               <button className="ml-6 flex rounded-lg bg-purple-base px-[14px] py-[9px] text-base font-medium leading-[18px] text-white">
-                <FeatherIcon className="mr-2" /> Post
+                <i className="icon icon-feather mr-2 flex" /> Post
               </button>
             </div>
           </div>
@@ -171,7 +162,7 @@ const Reviews = () => {
                     {item.user.name}
                   </span>
                   <span className="flex items-center text-sm font-normal leading-2 text-gray-base">
-                    <DateIcon className="mr-2" />
+                    <i className="icon icon-date mr-2 flex" />
                     {item.date}
                   </span>
                 </div>
@@ -207,7 +198,7 @@ const Reviews = () => {
                     ))}
                   </div>
                   <div className="flex">
-                    <StarIcon className="mr-2" />
+                    <i className="icon icon-star mr-2 flex" />
                     <span className="mr-2">
                       {item.restaurant.rating.average}
                     </span>
@@ -220,13 +211,13 @@ const Reviews = () => {
 
               <div className="flex justify-around">
                 <div className="flex">
-                  <ClapIcon className="mr-3" /> 24
+                  <i className="icon icon-clap mr-3 flex" /> 24
                 </div>
                 <div className="flex">
-                  <ReplyIcon className="mr-3" /> 10
+                  <i className="icon icon-reply mr-3 flex" /> 10
                 </div>
                 <div>
-                  <ShareIcon />
+                  <i className="icon icon-share flex " />
                 </div>
               </div>
             </div>

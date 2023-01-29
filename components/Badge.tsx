@@ -38,10 +38,17 @@ const variants = {
   },
 };
 
-const Badge = ({ text, color, type, className }: BadgeProps) => {
+const Badge = ({
+  text,
+  color = 'primary',
+  type = 'full',
+  className,
+}: BadgeProps) => {
   return (
     <div
-      className={`rounded-[4px] px-2 py-1 text-xs font-normal leading-1 ${variants[color][type]} ${className}`}
+      className={`rounded-[4px] px-2 py-1 text-xs font-normal leading-1 ${
+        type === 'border' ? 'border-[1.5px]' : ''
+      } ${variants[color][type]} ${className}`}
     >
       {text}
     </div>
