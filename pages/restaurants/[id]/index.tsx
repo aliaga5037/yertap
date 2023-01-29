@@ -4,7 +4,6 @@ import { sampleRestaurantData } from '../../../utils/sample-data';
 import Badge from '@components/Badge';
 import Tabs from '@components/restaurants/Tabs';
 
-import ArrowIcon from 'Icons/arrow';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -19,7 +18,7 @@ const Details = ({ item }) => {
           >
             Restaurants
           </Link>
-          <ArrowIcon className="-rotate-90 " />
+          <i className="icon icon-arrow flex -rotate-90 text-[8px] text-gray-light6 " />
           <Link
             href={`/restaurants/${item.id}`}
             className="text-sm font-medium leading-2 text-gray-light6 underline"
