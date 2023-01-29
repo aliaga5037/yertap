@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-css-tags */
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
 import Header from '@components/Header';
@@ -23,6 +24,7 @@ const Layout = ({
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link rel="icon" type="image/x-icon" href="favicon.svg"></link>
+      <link rel="stylesheet" href="/icons/icons.css" />
     </Head>
     <Header />
 

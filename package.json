@@ -5,7 +5,7 @@
     "build": "next build",
     "start": "next start",
     "type-check": "tsc",
-    "generateIcons": "fantasticon ./assets/icons/converted -o ./assets/icon-dist --normalize true",
+    "generateIcons": "fantasticon ./assets/icons/converted -o ./public/icons --normalize true",
     "oslllo-svg-fixer": "node node_modules/oslllo-svg-fixer/src/cli.js -s ./assets/icons/raw -d ./assets/icons/converted"
   },
   "dependencies": {
