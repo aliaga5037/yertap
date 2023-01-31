@@ -50,7 +50,7 @@ const Card = ({
 
       {gallery ? (
         <div className="mb-3 h-[256px] w-[285px] overflow-hidden rounded-lg">
-          <ImageSlider buttonGap={3} countType="dots" images={gallery} />
+          <ImageSlider countType="dots" images={gallery} />
         </div>
       ) : (
         <Image

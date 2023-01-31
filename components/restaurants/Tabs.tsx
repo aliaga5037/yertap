@@ -7,6 +7,7 @@ import Card from '@components/Card';
 import Menu from './menu';
 import Highlights from './highlights';
 import Reviews from './reviews';
+import Location from './location';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -87,7 +88,7 @@ export default function BasicTabs({ item }) {
           />
         </TabPanel>
         <TabPanel value={value} index={4}>
-          Item Three
+          <Location />
         </TabPanel>
 
         <div className="ml-auto flex flex-col pt-8">

@@ -4,14 +4,9 @@ import React, { SyntheticEvent, useState } from 'react';
 interface ImageSliderProps {
   images: string[];
   countType: 'numbers' | 'dots';
-  buttonGap?: number;
 }
 
-const ImageSlider = ({
-  images,
-  countType,
-  buttonGap = 8,
-}: ImageSliderProps) => {
+const ImageSlider = ({ images, countType }: ImageSliderProps) => {
   const [currentImage, setCurrentImage] = useState(0);
 
   const handleNext = (e: SyntheticEvent) => {
