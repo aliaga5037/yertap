@@ -13,12 +13,15 @@ export type IconsId =
   | "check"
   | "clap"
   | "close"
+  | "crown"
   | "date"
+  | "district"
   | "egg"
   | "ellipse"
   | "feather"
   | "filter"
   | "food"
+  | "fork_spoon"
   | "gps"
   | "health"
   | "home"
@@ -40,7 +43,8 @@ export type IconsId =
   | "star"
   | "steak"
   | "travel"
-  | "user";
+  | "user"
+  | "zoom";
 
 export type IconsKey =
   | "All"
@@ -57,12 +61,15 @@ export type IconsKey =
   | "Check"
   | "Clap"
   | "Close"
+  | "Crown"
   | "Date"
+  | "District"
   | "Egg"
   | "Ellipse"
   | "Feather"
   | "Filter"
   | "Food"
+  | "ForkSpoon"
   | "Gps"
   | "Health"
   | "Home"
@@ -84,7 +91,8 @@ export type IconsKey =
   | "Star"
   | "Steak"
   | "Travel"
-  | "User";
+  | "User"
+  | "Zoom";
 
 export enum Icons {
   All = "all",
@@ -101,12 +109,15 @@ export enum Icons {
   Check = "check",
   Clap = "clap",
   Close = "close",
+  Crown = "crown",
   Date = "date",
+  District = "district",
   Egg = "egg",
   Ellipse = "ellipse",
   Feather = "feather",
   Filter = "filter",
   Food = "food",
+  ForkSpoon = "fork_spoon",
   Gps = "gps",
   Health = "health",
   Home = "home",
@@ -129,6 +140,7 @@ export enum Icons {
   Steak = "steak",
   Travel = "travel",
   User = "user",
+  Zoom = "zoom",
 }
 
 export const ICONS_CODEPOINTS: { [key in Icons]: string } = {
@@ -146,32 +158,36 @@ export const ICONS_CODEPOINTS: { [key in Icons]: string } = {
   [Icons.Check]: "61708",
   [Icons.Clap]: "61709",
   [Icons.Close]: "61710",
-  [Icons.Date]: "61711",
-  [Icons.Egg]: "61712",
-  [Icons.Ellipse]: "61713",
-  [Icons.Feather]: "61714",
-  [Icons.Filter]: "61715",
-  [Icons.Food]: "61716",
-  [Icons.Gps]: "61717",
-  [Icons.Health]: "61718",
-  [Icons.Home]: "61719",
-  [Icons.Lang]: "61720",
-  [Icons.Load]: "61721",
-  [Icons.Logo]: "61722",
-  [Icons.MoneyBag]: "61723",
-  [Icons.More]: "61724",
-  [Icons.Pet]: "61725",
-  [Icons.Photo]: "61726",
-  [Icons.Pin]: "61727",
-  [Icons.Pizza]: "61728",
-  [Icons.Plate]: "61729",
-  [Icons.Price]: "61730",
-  [Icons.Reply]: "61731",
-  [Icons.Search]: "61732",
-  [Icons.Share]: "61733",
-  [Icons.Shop]: "61734",
-  [Icons.Star]: "61735",
-  [Icons.Steak]: "61736",
-  [Icons.Travel]: "61737",
-  [Icons.User]: "61738",
+  [Icons.Crown]: "61711",
+  [Icons.Date]: "61712",
+  [Icons.District]: "61713",
+  [Icons.Egg]: "61714",
+  [Icons.Ellipse]: "61715",
+  [Icons.Feather]: "61716",
+  [Icons.Filter]: "61717",
+  [Icons.Food]: "61718",
+  [Icons.ForkSpoon]: "61719",
+  [Icons.Gps]: "61720",
+  [Icons.Health]: "61721",
+  [Icons.Home]: "61722",
+  [Icons.Lang]: "61723",
+  [Icons.Load]: "61724",
+  [Icons.Logo]: "61725",
+  [Icons.MoneyBag]: "61726",
+  [Icons.More]: "61727",
+  [Icons.Pet]: "61728",
+  [Icons.Photo]: "61729",
+  [Icons.Pin]: "61730",
+  [Icons.Pizza]: "61731",
+  [Icons.Plate]: "61732",
+  [Icons.Price]: "61733",
+  [Icons.Reply]: "61734",
+  [Icons.Search]: "61735",
+  [Icons.Share]: "61736",
+  [Icons.Shop]: "61737",
+  [Icons.Star]: "61738",
+  [Icons.Steak]: "61739",
+  [Icons.Travel]: "61740",
+  [Icons.User]: "61741",
+  [Icons.Zoom]: "61742",
 };

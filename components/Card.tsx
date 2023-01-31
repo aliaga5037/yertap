@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import ImageSlider from './ImageSlider';
 import Tag from './Tag';
 
 import Link from 'next/link';
@@ -18,6 +19,7 @@ interface CardProps {
   className?: string;
   id: number;
   sponsored?: boolean;
+  gallery?: string[];
 }
 
 const Card = ({
@@ -30,6 +32,7 @@ const Card = ({
   className,
   id,
   sponsored,
+  gallery,
 }: CardProps) => {
   return (
     <Link
@@ -44,14 +47,22 @@ const Card = ({
           type="full"
         />
       )}
-      <Image
-        className="mb-3 rounded-lg"
-        width={285}
-        height={256}
-        src={image}
-        alt={title}
-        priority={false}
-      />
+
+      {gallery ? (
+        <div className="mb-3 h-[256px] w-[285px] overflow-hidden rounded-lg">
+          <ImageSlider buttonGap={3} countType="dots" images={gallery} />
+        </div>
+      ) : (
+        <Image
+          className="mb-3 rounded-lg"
+          width={285}
+          height={256}
+          src={image}
+          alt={title}
+          priority={false}
+        />
+      )}
+
       <div className="mb-4 flex items-center justify-between">
         <div className="flex">
           <i className="icon icon-star mr-2 flex text-xl" />

@@ -9,7 +9,7 @@ interface TagProps {
 const Tag = ({ title, onRemove, className = '' }: TagProps) => {
   return (
     <span
-      className={`flex items-center rounded-[4px] bg-purple-light2 px-1 py-1 text-xs font-normal capitalize leading-1 text-purple-dark1 ${className}`}
+      className={`flex items-center rounded-[4px] bg-purple-light2 px-2 py-1 text-xs font-normal capitalize leading-1 text-purple-dark1 ${className}`}
     >
       {title}{' '}
       {onRemove ? (

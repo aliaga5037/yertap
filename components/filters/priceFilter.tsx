@@ -3,10 +3,10 @@ import Checkbox from '@components/Checkbox';
 const PriceFilter = () => {
   return (
     <div>
-      <span className="-ml-6 mb-4 flex items-center text-base font-medium leading-[16px] tracking-[0.6px] text-gray-dark3 ">
+      <h3 className="-ml-6 mb-4 flex items-center text-base font-medium leading-[16px] tracking-[0.6px] text-gray-dark3 ">
         <i className="icon icon-money_bag mr-3 flex" />
         Price
-      </span>
+      </h3>
       <div className="flex flex-col">
         <div className="mb-5 flex items-center">
           <div className="mr-3.5">

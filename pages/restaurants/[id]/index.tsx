@@ -6,6 +6,7 @@ import Tabs from '@components/restaurants/Tabs';
 
 import Link from 'next/link';
 import Image from 'next/image';
+import ImageSlider from '@components/ImageSlider';
 
 const Details = ({ item }) => {
   return (
@@ -64,14 +65,8 @@ const Details = ({ item }) => {
           </Link>
         </div>
         <div className="mb-4 flex h-[416px] gap-2 overflow-hidden rounded-lg">
-          <div className="flex">
-            <Image
-              width={100}
-              height={100}
-              src={item.gallery[0]}
-              alt=""
-              className="h-full w-[636px]"
-            />
+          <div className="flex w-[636px]">
+            <ImageSlider countType="numbers" images={item.gallery} />
           </div>
           <div className="flex w-[40vw] flex-col gap-2">
             <div className="flex gap-2">

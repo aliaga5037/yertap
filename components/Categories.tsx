@@ -19,11 +19,11 @@ const Categories = ({ categories }: CategoriesProps) => {
       {categories.map((category) => (
         <div
           key={category.id}
-          className={`flex w-full cursor-pointer flex-row 
+          className={`grid w-full  cursor-pointer grid-cols-[1fr_3fr_1fr]
           items-center rounded-lg px-4 py-3 text-sm font-medium leading-2 
           text-gray-base hover:bg-purple-light1 hover:text-purple-dark1`}
         >
-          <i className={`icon icon-${category.icon} text-2xl mr-4 flex`} />
+          <i className={`icon icon-${category.icon} mr-4 flex text-2xl`} />
           <span>{category.title}</span>
 
           {!category.isAvailable && (

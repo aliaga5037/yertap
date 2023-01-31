@@ -273,3 +273,11 @@ export const categories = [
     isAvailable: false,
   },
 ];
+
+export const tags = [
+  { id: 1, title: 'all', icon: 'all' },
+  { id: 2, title: 'breakfast', icon: 'egg' },
+  { id: 3, title: 'pizza', icon: 'pizza' },
+  { id: 6, title: 'burger', icon: 'burger' },
+  { id: 7, title: 'steak', icon: 'steak' },
+];

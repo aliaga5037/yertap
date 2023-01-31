@@ -33,13 +33,13 @@ const Layout = ({
         <div className="flex flex-col">
           <Link
             href="/reviews"
-            className="flex w-[260px] cursor-pointer flex-row rounded-lg bg-purple-light1 px-4 py-3 text-sm font-medium leading-2 text-purple-dark1"
+            className="grid w-[260px]  cursor-pointer grid-cols-[1fr_3fr_1fr] rounded-lg bg-purple-light1 px-4 py-3 text-sm font-medium leading-2 text-purple-dark1"
           >
             <i className="icon icon-feather mr-5 flex text-2xl" /> Review
           </Link>
           <Link
             href="/saved"
-            className="group flex w-[260px] cursor-pointer flex-row rounded-lg px-4 py-3 text-sm font-medium leading-2 text-gray-base hover:bg-purple-light1 hover:text-purple-dark1"
+            className="group  grid w-[260px] cursor-pointer grid-cols-[1fr_3fr_1fr]  rounded-lg px-4 py-3 text-sm font-medium leading-2 text-gray-base hover:bg-purple-light1 hover:text-purple-dark1"
           >
             <i className="icon icon-bookmark mr-5 flex text-2xl" />
             Save List

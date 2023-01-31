@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
+import FoodTypeFilter from './filters/foodTypeFilter';
 import LocationFilter from './filters/locationFilter';
-import PriceFilter from './filters/priceFilter';
+// import PriceFilter from './filters/priceFilter';
+import RatingFilter from './filters/ratingFilter';
 
 const Filter = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,8 +44,12 @@ const Filter = () => {
 
           <div className="flex flex-col border-y border-gray-light3 py-9 px-[60px]">
             <LocationFilter />
+            {/* <span className="mb-8"></span>
+            <PriceFilter /> */}
             <span className="mb-8"></span>
-            <PriceFilter />
+            <RatingFilter />
+            <span className="mb-8"></span>
+            <FoodTypeFilter />
           </div>
 
           <div className="flex justify-end p-6">

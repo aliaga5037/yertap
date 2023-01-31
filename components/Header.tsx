@@ -61,7 +61,7 @@ export const Header: React.FC = () => {
             </span>
           </Link>
           <Dropdown title="Categories" className="mr-1">
-            <div className="w-[277px] mt-2 -ml-14 overflow-hidden rounded-lg border border-gray-light3 bg-white">
+            <div className="mt-2 -ml-14 w-[277px] overflow-hidden rounded-lg border border-gray-light3 bg-white">
               <div className="flex items-center border-b border-b-gray-light3 py-4 px-6">
                 <h1 className="text-base font-semibold leading-2 text-gray-base">
                   Categories
@@ -73,9 +73,58 @@ export const Header: React.FC = () => {
             </div>
           </Dropdown>
           <Dropdown title="City" className="mr-1">
-            <div>City</div>
+            <div className="mt-2 -ml-14 w-[277px] overflow-hidden rounded-lg border border-gray-light3 bg-white">
+              <div className="flex items-center border-b border-b-gray-light3 py-4 px-6">
+                <h1 className="text-base font-semibold leading-2 text-gray-base">
+                  City
+                </h1>
+              </div>
+
+              <div className="flex border-b py-4 px-6">
+                <div className="flex flex-col">
+                  <Link
+                    href="/"
+                    className="py-2 text-base font-medium leading-2 text-gray-base hover:text-purple-base"
+                  >
+                    Baku
+                  </Link>
+                  <Link
+                    href="/"
+                    className="py-2 text-base font-medium leading-2 text-gray-base hover:text-purple-base"
+                  >
+                    Ganja
+                  </Link>
+                </div>
+              </div>
+            </div>
           </Dropdown>
-          {/* <Dropdown title="District" className="mr-1" /> */}
+
+          <Dropdown title="District" className="mr-1">
+            <div className="mt-2 -ml-14 w-[277px] overflow-hidden rounded-lg border border-gray-light3 bg-white">
+              <div className="flex items-center border-b border-b-gray-light3 py-4 px-6">
+                <h1 className="text-base font-semibold leading-2 text-gray-base">
+                  District
+                </h1>
+              </div>
+
+              <div className="flex border-b py-4 px-6">
+                <div className="flex flex-col">
+                  <Link
+                    href="/"
+                    className="py-2 text-base font-medium leading-2 text-gray-base hover:text-purple-base"
+                  >
+                    Bineqedi
+                  </Link>
+                  <Link
+                    href="/"
+                    className="py-2 text-base font-medium leading-2 text-gray-base hover:text-purple-base"
+                  >
+                    Xocasen
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </Dropdown>
           <Stack spacing={2} sx={{ width: 300 }}>
             <Autocomplete
               id="free-solo-demo"

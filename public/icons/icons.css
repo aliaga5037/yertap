@@ -1,8 +1,8 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.eot?31348a19fad471bddbe24871122ed15b#iefix") format("embedded-opentype"),
-url("./icons.woff2?31348a19fad471bddbe24871122ed15b") format("woff2"),
-url("./icons.woff?31348a19fad471bddbe24871122ed15b") format("woff");
+    src: url("./icons.eot?3f52dd1e3c474413c969c51c23c38071#iefix") format("embedded-opentype"),
+url("./icons.woff2?3f52dd1e3c474413c969c51c23c38071") format("woff2"),
+url("./icons.woff?3f52dd1e3c474413c969c51c23c38071") format("woff");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -58,87 +58,99 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-close:before {
     content: "\f10e";
 }
-.icon-date:before {
+.icon-crown:before {
     content: "\f10f";
 }
-.icon-egg:before {
+.icon-date:before {
     content: "\f110";
 }
-.icon-ellipse:before {
+.icon-district:before {
     content: "\f111";
 }
-.icon-feather:before {
+.icon-egg:before {
     content: "\f112";
 }
-.icon-filter:before {
+.icon-ellipse:before {
     content: "\f113";
 }
-.icon-food:before {
+.icon-feather:before {
     content: "\f114";
 }
-.icon-gps:before {
+.icon-filter:before {
     content: "\f115";
 }
-.icon-health:before {
+.icon-food:before {
     content: "\f116";
 }
-.icon-home:before {
+.icon-fork_spoon:before {
     content: "\f117";
 }
-.icon-lang:before {
+.icon-gps:before {
     content: "\f118";
 }
-.icon-load:before {
+.icon-health:before {
     content: "\f119";
 }
-.icon-logo:before {
+.icon-home:before {
     content: "\f11a";
 }
-.icon-money_bag:before {
+.icon-lang:before {
     content: "\f11b";
 }
-.icon-more:before {
+.icon-load:before {
     content: "\f11c";
 }
-.icon-pet:before {
+.icon-logo:before {
     content: "\f11d";
 }
-.icon-photo:before {
+.icon-money_bag:before {
     content: "\f11e";
 }
-.icon-pin:before {
+.icon-more:before {
     content: "\f11f";
 }
-.icon-pizza:before {
+.icon-pet:before {
     content: "\f120";
 }
-.icon-plate:before {
+.icon-photo:before {
     content: "\f121";
 }
-.icon-price:before {
+.icon-pin:before {
     content: "\f122";
 }
-.icon-reply:before {
+.icon-pizza:before {
     content: "\f123";
 }
-.icon-search:before {
+.icon-plate:before {
     content: "\f124";
 }
-.icon-share:before {
+.icon-price:before {
     content: "\f125";
 }
-.icon-shop:before {
+.icon-reply:before {
     content: "\f126";
 }
-.icon-star:before {
+.icon-search:before {
     content: "\f127";
 }
-.icon-steak:before {
+.icon-share:before {
     content: "\f128";
 }
-.icon-travel:before {
+.icon-shop:before {
     content: "\f129";
 }
-.icon-user:before {
+.icon-star:before {
     content: "\f12a";
+}
+.icon-steak:before {
+    content: "\f12b";
+}
+.icon-travel:before {
+    content: "\f12c";
+}
+.icon-user:before {
+    content: "\f12d";
+}
+.icon-zoom:before {
+    content: "\f12e";
 }
