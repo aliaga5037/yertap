@@ -47,7 +47,7 @@ export const Dropdown = ({
         />
       </button>
       <div
-        className={`absolute z-10 w-full scale-y-0 transition-all delay-150 ease-in-out ${
+        className={`absolute z-20 w-full scale-y-0 transition-all delay-150 ease-in-out ${
           isOpen && 'origin-top scale-y-100'
         }`}
       >

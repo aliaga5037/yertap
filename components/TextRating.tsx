@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Rating from '@mui/material/Rating';
 import Box from '@mui/material/Box';
-import StarIcon from '@mui/icons-material/Star';
 
 const TextRating = ({ rating }: { rating: number }) => {
   return (
@@ -16,7 +15,8 @@ const TextRating = ({ rating }: { rating: number }) => {
         value={rating}
         readOnly
         precision={0.5}
-        emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+        emptyIcon={<i className="icon icon-star mr-1 text-xl text-inherit" />}
+        icon={<i className="icon icon-star mr-1 text-xl text-purple-base" />}
       />
     </Box>
   );

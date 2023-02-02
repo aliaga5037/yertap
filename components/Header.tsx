@@ -9,6 +9,7 @@ import NotificationsPopup from './NotificationsPopup';
 import Categories from '@components/Categories';
 
 import { categories } from '@utils/sample-data';
+import { useRouter } from 'next/router';
 
 const top100Films = [
   { title: 'The Shawshank Redemption', year: 1994 },
@@ -50,6 +51,7 @@ const items = [
 ];
 
 export const Header: React.FC = () => {
+  const { pathname: activeUrl } = useRouter();
   return (
     <header className="border-b border-gray-light1 py-5 px-[120px]">
       <div className="flex items-center justify-between">
@@ -68,7 +70,7 @@ export const Header: React.FC = () => {
                 </h1>
               </div>
               <div className="px-2 py-6">
-                <Categories categories={categories} />
+                <Categories activeUrl={activeUrl} categories={categories} />
               </div>
             </div>
           </Dropdown>
@@ -143,7 +145,7 @@ export const Header: React.FC = () => {
             <i className="icon icon-bell flex cursor-pointer text-xl" />
             <i className="icon icon-ellipse absolute top-0.5 left-2.5 flex cursor-pointer text-purple-base" />
 
-            <div className="absolute -right-20 top-11 z-10 scale-0 transition-all delay-300 ease-in-out group-hover:scale-100">
+            <div className="absolute -right-20 top-11 z-20 scale-0 transition-all delay-300 ease-in-out group-hover:scale-100">
               <NotificationsPopup items={items} />
             </div>
           </span>

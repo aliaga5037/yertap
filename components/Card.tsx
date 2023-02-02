@@ -35,39 +35,45 @@ const Card = ({
   gallery,
 }: CardProps) => {
   return (
-    <Link
-      href={`/restaurants/${id}`}
-      className={`relative mb-10 flex flex-col ${className ?? ''}`}
-    >
+    <div className={`relative mb-10 flex flex-col`}>
       {sponsored && (
         <Badge
-          className="absolute top-3 left-3 mb-3 rounded-lg px-2 py-0"
+          className="absolute top-3 left-3 z-10 mb-3 rounded-lg px-2 py-0"
           text="Sponsored"
           color="gray"
           type="full"
         />
       )}
 
-      {gallery ? (
-        <div className="mb-3 h-[256px] w-[285px] overflow-hidden rounded-lg">
-          <ImageSlider countType="dots" images={gallery} />
-        </div>
-      ) : (
-        <Image
-          className="mb-3 rounded-lg"
-          width={285}
-          height={256}
-          src={image}
-          alt={title}
-          priority={false}
-        />
-      )}
+      <Link
+        href={`/restaurants/${id}`}
+        className={`relative flex flex-col ${className ?? ''}`}
+      >
+        {gallery ? (
+          <div className="mb-3 h-[256px] w-[285px] overflow-hidden rounded-lg">
+            <ImageSlider countType="dots" images={gallery} />
+          </div>
+        ) : (
+          <Image
+            className="mb-3 rounded-lg"
+            width={285}
+            height={256}
+            src={image}
+            alt={title}
+            priority={false}
+          />
+        )}
+      </Link>
 
       <div className="mb-4 flex items-center justify-between">
-        <div className="flex">
+        <div className="flex items-center">
           <i className="icon icon-star mr-2 flex text-xl" />
-          <span className="mr-2">{rating.average}</span>
-          <span>({rating.count.toLocaleString()})</span>
+          <span className="mr-2 text-sm font-medium leading-1 text-gray-dark3">
+            {rating.average}
+          </span>
+          <span className="text-sm font-normal leading-1 text-gray-dark3">
+            ({rating.count.toLocaleString()})
+          </span>
         </div>
         <div className="flex items-center">
           <i className="icon icon-share mr-4 flex cursor-pointer text-2xl" />
@@ -78,19 +84,21 @@ const Card = ({
           />
         </div>
       </div>
-      <span className="text-base font-medium leading-2 text-gray-dark3">
-        {title}
-      </span>
-      <span className="mb-3 text-base font-normal leading-2 text-gray-dark3">
-        {type}
-      </span>
+      <Link href={`/restaurants/${id}`} className="flex flex-col">
+        <span className="text-base font-medium leading-2 text-gray-dark3">
+          {title}
+        </span>
+        <span className="mb-3 text-base font-normal leading-2 text-gray-dark3">
+          {type}
+        </span>
+      </Link>
 
       <div className="flex">
         {tags.map((tag) => (
           <Tag key={tag} title={tag} className="mr-1" />
         ))}
       </div>
-    </Link>
+    </div>
   );
 };
 

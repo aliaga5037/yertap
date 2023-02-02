@@ -36,8 +36,8 @@ const Reviews = ({
 
         <div className="ml-auto flex">
           <i className="icon icon-star mr-2 flex" />
-          <span className="mr-2">{review.average}</span>
-          <span>({review.count.toLocaleString()})</span>
+          <span className="mr-2 text-sm font-medium leading-1 text-gray-dark3">{review.average}</span>
+          <span className='text-sm font-normal leading-1 text-gray-dark3'>({review.count.toLocaleString()})</span>
         </div>
       </div>
 
@@ -70,9 +70,13 @@ const Reviews = ({
 
       <div className="mb-12 flex w-[590px] flex-col rounded-xl bg-gray-light0 p-6">
         <div className="mb-6 flex">
-          <span>You can give</span>
+          <span className="text-dark2 mr-1 text-base font-medium leading-3">
+            You can give
+          </span>
           <HoverRating initialRating={2} />
-          <span>stars</span>
+          <span className="text-dark2 ml-1 text-base font-medium leading-3">
+            stars
+          </span>
         </div>
 
         <div className="mb-6">
@@ -114,8 +118,14 @@ const Reviews = ({
               {item.text}
             </span>
           </div>
-          <div className="mb-6 flex text-base font-medium leading-3 text-gray-dark2">
-            I gave <TextRating rating={item.rating} /> stars
+          <div className="mb-6 flex items-center text-base font-medium leading-3 text-gray-dark2">
+            <span className="text-dark2 mr-1 text-base font-medium leading-3">
+              I gave
+            </span>
+            <TextRating rating={item.rating} />
+            <span className="text-dark2 ml-1 text-base font-medium leading-3">
+              stars
+            </span>
           </div>
           <div className="flex justify-around">
             <div className="flex">

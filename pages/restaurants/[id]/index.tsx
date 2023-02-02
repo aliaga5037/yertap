@@ -32,7 +32,7 @@ const Details = ({ item }) => {
         </h1>
         <div className="mb-3 flex items-center">
           <i className="icon icon-star mr-3 flex" />
-          <span>
+          <span className="text-sm font-medium leading-1 text-gray-dark3">
             {item.rating.average} ({item.rating.count})
           </span>
           <span className="ml-3 mr-2 h-[4px] w-[4px] rounded-full bg-black"></span>
@@ -68,45 +68,46 @@ const Details = ({ item }) => {
           <div className="flex w-[636px]">
             <ImageSlider countType="numbers" images={item.gallery} />
           </div>
-          <div className="flex w-[40vw] flex-col gap-2">
-            <div className="flex gap-2">
-              <Image
-                width={100}
-                height={100}
-                src={item.gallery[1]}
-                alt=""
-                className="h-full w-full"
-              />
-              <Image
-                width={100}
-                height={100}
-                src={item.gallery[2]}
-                alt=""
-                className="h-full w-full"
-              />
+          <div className="flex grow flex-col gap-2">
+            <div className="flex h-[248px] gap-2">
+              <div className="relative w-[274px]">
+                <Image fill={true} src={item.gallery[1]} alt="" />
+              </div>
+              <div className="relative w-[274px]">
+                <Image fill={true} src={item.gallery[2]} alt="" />
+              </div>
             </div>
-            <div className="flex gap-2">
-              <Image
-                width={100}
-                height={100}
-                src={item.gallery[3]}
-                alt=""
-                className="h-full w-full"
-              />
-              <Image
-                width={100}
-                height={100}
-                src={item.gallery[4]}
-                alt=""
-                className="h-full w-full"
-              />
-              <Image
-                width={100}
-                height={100}
-                src={item.gallery[5]}
-                alt=""
-                className="h-full w-full"
-              />
+            <div className="relative flex h-[160px] w-[556px] gap-2">
+              <div className="relative h-full w-full">
+                <Image
+                  sizes="(max-width: 556px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+                  fill
+                  src={item.gallery[3]}
+                  alt=""
+                />
+              </div>
+              <div className="relative h-full w-full">
+                <Image
+                  fill
+                  sizes="(max-width: 556px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+                  src={item.gallery[4]}
+                  alt=""
+                />
+              </div>
+              <div className="relative h-full w-full">
+                <Image
+                  fill
+                  sizes="(max-width: 556px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+                  src={item.gallery[5]}
+                  alt=""
+                />
+              </div>
             </div>
           </div>
         </div>

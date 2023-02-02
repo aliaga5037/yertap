@@ -38,7 +38,7 @@ const Filter = () => {
       </div>
       {isOpen && (
         <div className="absolute top-[50px] right-0 z-10 flex w-[377px] flex-col rounded-lg border border-gray-light3 bg-white">
-          <div className="px-6 py-3 text-base font-semibold leading-2 text-gray-base">
+          <div className="block px-6 py-3 text-base font-semibold leading-2 text-gray-base">
             Filter
           </div>
 

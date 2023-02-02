@@ -127,9 +127,13 @@ const Reviews = () => {
             </div>
 
             <div className="mb-6 flex">
-              <span>You can give</span>
+              <span className="text-dark2 mr-1 text-base font-medium leading-3">
+                You can give
+              </span>
               <HoverRating initialRating={2} />
-              <span>stars</span>
+              <span className="text-dark2 ml-1 text-base font-medium leading-3">
+                stars
+              </span>
             </div>
 
             <div className="mb-6">
@@ -172,8 +176,14 @@ const Reviews = () => {
                   {item.text}
                 </span>
               </div>
-              <div className="mb-6 flex text-base font-medium leading-3 text-gray-dark2">
-                I gave <TextRating rating={item.rating} /> stars
+              <div className="mb-6 flex items-center text-base font-medium leading-3 text-gray-dark2">
+                <span className="text-dark2 mr-1 text-base font-medium leading-3">
+                  I gave
+                </span>
+                <TextRating rating={item.rating} />
+                <span className="text-dark2 ml-1 text-base font-medium leading-3">
+                  stars
+                </span>
               </div>
 
               <div className="mb-6 flex w-full overflow-hidden rounded-lg border border-gray-light3 bg-white">
@@ -197,12 +207,12 @@ const Reviews = () => {
                       <Tag key={tag} title={tag} className="mr-1" />
                     ))}
                   </div>
-                  <div className="flex">
+                  <div className="flex items-center">
                     <i className="icon icon-star mr-2 flex" />
-                    <span className="mr-2">
+                    <span className="mr-2 text-sm font-medium leading-1 text-gray-dark3">
                       {item.restaurant.rating.average}
                     </span>
-                    <span>
+                    <span className="text-sm font-normal leading-1 text-gray-dark3">
                       ({item.restaurant.rating.count.toLocaleString()})
                     </span>
                   </div>

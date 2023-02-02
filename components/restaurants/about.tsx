@@ -1,3 +1,4 @@
+import TextContainer from '@components/TextContainer';
 import React from 'react';
 
 const About = () => {
@@ -33,15 +34,16 @@ const About = () => {
         <h1 className="mb-5 text-xl font-bold leading-6 text-black">
           About This Place:
         </h1>
-        <p className="text-base font-normal leading-3 text-black">
-          Very lovely place with diverse number of dishes, also has a dietician
+        <TextContainer
+          limit={100}
+          text="Very lovely place with diverse number of dishes, also has a dietician
           versions of different desserts and main dishes. I come to different
           branches of VAPIANO quite often and never had experienced anything
           bad, always good vibes only, very lovely place with diverse number of
           dishes. Also has a dietician versions of different desserts and main
           dishes. I come to different branches of VAPIANO quite often and never
-          had experienced anything bad, always good vibes only...
-        </p>
+          had experienced anything bad, always good vibes only"
+        />
       </div>
     </>
   );

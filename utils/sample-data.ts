@@ -204,15 +204,15 @@ export const sampleRestaurantData: Restaurant[] = [
 export const categories = [
   {
     id: 1,
-    title: 'Food',
-    slug: 'food',
+    title: 'Restaurant',
+    slug: '/',
     icon: 'food',
     isAvailable: true,
   },
   {
     id: 2,
     title: 'Travel',
-    slug: 'travel',
+    slug: '/travel',
     icon: 'travel',
     isAvailable: false,
   },
