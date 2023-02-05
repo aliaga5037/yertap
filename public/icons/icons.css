@@ -1,8 +1,8 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.eot?3f52dd1e3c474413c969c51c23c38071#iefix") format("embedded-opentype"),
-url("./icons.woff2?3f52dd1e3c474413c969c51c23c38071") format("woff2"),
-url("./icons.woff?3f52dd1e3c474413c969c51c23c38071") format("woff");
+    src: url("./icons.eot?2b87df1e64cda6e0f3229ea07bdba712#iefix") format("embedded-opentype"),
+url("./icons.woff2?2b87df1e64cda6e0f3229ea07bdba712") format("woff2"),
+url("./icons.woff?2b87df1e64cda6e0f3229ea07bdba712") format("woff");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -55,102 +55,123 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-clap:before {
     content: "\f10d";
 }
-.icon-close:before {
+.icon-clean:before {
     content: "\f10e";
 }
-.icon-crown:before {
+.icon-close-circle:before {
     content: "\f10f";
 }
-.icon-date:before {
+.icon-close-sircle:before {
     content: "\f110";
 }
-.icon-district:before {
+.icon-close:before {
     content: "\f111";
 }
-.icon-egg:before {
+.icon-crown:before {
     content: "\f112";
 }
-.icon-ellipse:before {
+.icon-date:before {
     content: "\f113";
 }
-.icon-feather:before {
+.icon-district:before {
     content: "\f114";
 }
-.icon-filter:before {
+.icon-egg:before {
     content: "\f115";
 }
-.icon-food:before {
+.icon-ellipse:before {
     content: "\f116";
 }
-.icon-fork_spoon:before {
+.icon-feather:before {
     content: "\f117";
 }
-.icon-gps:before {
+.icon-filter:before {
     content: "\f118";
 }
-.icon-health:before {
+.icon-food:before {
     content: "\f119";
 }
-.icon-home:before {
+.icon-fork_spoon:before {
     content: "\f11a";
 }
-.icon-lang:before {
+.icon-gps:before {
     content: "\f11b";
 }
-.icon-load:before {
+.icon-hanger:before {
     content: "\f11c";
 }
-.icon-logo:before {
+.icon-health:before {
     content: "\f11d";
 }
-.icon-money_bag:before {
+.icon-home:before {
     content: "\f11e";
 }
-.icon-more:before {
+.icon-lang:before {
     content: "\f11f";
 }
-.icon-pet:before {
+.icon-load:before {
     content: "\f120";
 }
-.icon-photo:before {
+.icon-logo:before {
     content: "\f121";
 }
-.icon-pin:before {
+.icon-money_bag:before {
     content: "\f122";
 }
-.icon-pizza:before {
+.icon-more:before {
     content: "\f123";
 }
-.icon-plate:before {
+.icon-nursery:before {
     content: "\f124";
 }
-.icon-price:before {
+.icon-pet:before {
     content: "\f125";
 }
-.icon-reply:before {
+.icon-photo:before {
     content: "\f126";
 }
-.icon-search:before {
+.icon-pin:before {
     content: "\f127";
 }
-.icon-share:before {
+.icon-pizza:before {
     content: "\f128";
 }
-.icon-shop:before {
+.icon-plate:before {
     content: "\f129";
 }
-.icon-star:before {
+.icon-price:before {
     content: "\f12a";
 }
-.icon-steak:before {
+.icon-reply:before {
     content: "\f12b";
 }
-.icon-travel:before {
+.icon-search:before {
     content: "\f12c";
 }
-.icon-user:before {
+.icon-share:before {
     content: "\f12d";
 }
-.icon-zoom:before {
+.icon-shop:before {
     content: "\f12e";
+}
+.icon-star:before {
+    content: "\f12f";
+}
+.icon-steak:before {
+    content: "\f130";
+}
+.icon-tap:before {
+    content: "\f131";
+}
+.icon-travel:before {
+    content: "\f132";
+}
+.icon-user:before {
+    content: "\f133";
+}
+.icon-wc:before {
+    content: "\f134";
+}
+.icon-zoom:before {
+    content: "\f135";
 }

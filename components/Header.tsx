@@ -41,7 +41,7 @@ const items = [
     user: {
       id: 1,
       name: 'John Doe',
-      image: '/images/user.jpg',
+      image: '',
     },
     title: 'John clapped your Review!',
     text: `Looking for low prices? We've got an entire page dedicated to finding you fantastic deals in your favorite places.`,
@@ -82,17 +82,17 @@ export const Header: React.FC = () => {
                 </h1>
               </div>
 
-              <div className="flex border-b py-4 px-6">
-                <div className="flex flex-col">
+              <div className="flex border-b py-4 px-2">
+                <div className="flex w-full flex-col">
                   <Link
                     href="/"
-                    className="py-2 text-base font-medium leading-2 text-gray-base hover:text-purple-base"
+                    className="rounded-lg py-4 px-4 text-base font-medium leading-2 text-gray-base hover:bg-purple-light1 hover:text-purple-base"
                   >
                     Baku
                   </Link>
                   <Link
                     href="/"
-                    className="py-2 text-base font-medium leading-2 text-gray-base hover:text-purple-base"
+                    className="rounded-lg py-4 px-4 text-base font-medium leading-2 text-gray-base hover:bg-purple-light1 hover:text-purple-base"
                   >
                     Ganja
                   </Link>
@@ -109,17 +109,17 @@ export const Header: React.FC = () => {
                 </h1>
               </div>
 
-              <div className="flex border-b py-4 px-6">
-                <div className="flex flex-col">
+              <div className="flex border-b py-4 px-2">
+                <div className="flex w-full flex-col">
                   <Link
                     href="/"
-                    className="py-2 text-base font-medium leading-2 text-gray-base hover:text-purple-base"
+                    className="rounded-lg py-4 px-4 text-base font-medium leading-2 text-gray-base hover:bg-purple-light1 hover:text-purple-base"
                   >
                     Bineqedi
                   </Link>
                   <Link
                     href="/"
-                    className="py-2 text-base font-medium leading-2 text-gray-base hover:text-purple-base"
+                    className="rounded-lg py-4 px-4 text-base font-medium leading-2 text-gray-base hover:bg-purple-light1 hover:text-purple-base"
                   >
                     Xocasen
                   </Link>
@@ -134,6 +134,7 @@ export const Header: React.FC = () => {
               size="small"
               options={top100Films.map((option) => option.title)}
               renderInput={(params) => <TextField {...params} label="Search" />}
+              clearIcon={<i className="icon icon-close-circle flex text-lg text-gray-dark1" />}
             />
           </Stack>
         </div>

@@ -30,6 +30,11 @@ export type Review = {
   }[];
 };
 
+export type Highlight = {
+  title: string;
+  icon: string;
+};
+
 export type Restaurant = {
   id: number;
   title: string;
@@ -56,9 +61,6 @@ export type Restaurant = {
     }[];
     type: string;
   }[];
-  highlights?: {
-    title: string;
-    icon: string;
-  }[];
+  highlights?: Highlight[];
   review?: Review;
 };

@@ -12,6 +12,9 @@ export type IconsId =
   | "care"
   | "check"
   | "clap"
+  | "clean"
+  | "close-circle"
+  | "close-sircle"
   | "close"
   | "crown"
   | "date"
@@ -23,6 +26,7 @@ export type IconsId =
   | "food"
   | "fork_spoon"
   | "gps"
+  | "hanger"
   | "health"
   | "home"
   | "lang"
@@ -30,6 +34,7 @@ export type IconsId =
   | "logo"
   | "money_bag"
   | "more"
+  | "nursery"
   | "pet"
   | "photo"
   | "pin"
@@ -42,8 +47,10 @@ export type IconsId =
   | "shop"
   | "star"
   | "steak"
+  | "tap"
   | "travel"
   | "user"
+  | "wc"
   | "zoom";
 
 export type IconsKey =
@@ -60,6 +67,9 @@ export type IconsKey =
   | "Care"
   | "Check"
   | "Clap"
+  | "Clean"
+  | "CloseCircle"
+  | "CloseSircle"
   | "Close"
   | "Crown"
   | "Date"
@@ -71,6 +81,7 @@ export type IconsKey =
   | "Food"
   | "ForkSpoon"
   | "Gps"
+  | "Hanger"
   | "Health"
   | "Home"
   | "Lang"
@@ -78,6 +89,7 @@ export type IconsKey =
   | "Logo"
   | "MoneyBag"
   | "More"
+  | "Nursery"
   | "Pet"
   | "Photo"
   | "Pin"
@@ -90,8 +102,10 @@ export type IconsKey =
   | "Shop"
   | "Star"
   | "Steak"
+  | "Tap"
   | "Travel"
   | "User"
+  | "Wc"
   | "Zoom";
 
 export enum Icons {
@@ -108,6 +122,9 @@ export enum Icons {
   Care = "care",
   Check = "check",
   Clap = "clap",
+  Clean = "clean",
+  CloseCircle = "close-circle",
+  CloseSircle = "close-sircle",
   Close = "close",
   Crown = "crown",
   Date = "date",
@@ -119,6 +136,7 @@ export enum Icons {
   Food = "food",
   ForkSpoon = "fork_spoon",
   Gps = "gps",
+  Hanger = "hanger",
   Health = "health",
   Home = "home",
   Lang = "lang",
@@ -126,6 +144,7 @@ export enum Icons {
   Logo = "logo",
   MoneyBag = "money_bag",
   More = "more",
+  Nursery = "nursery",
   Pet = "pet",
   Photo = "photo",
   Pin = "pin",
@@ -138,8 +157,10 @@ export enum Icons {
   Shop = "shop",
   Star = "star",
   Steak = "steak",
+  Tap = "tap",
   Travel = "travel",
   User = "user",
+  Wc = "wc",
   Zoom = "zoom",
 }
 
@@ -157,37 +178,44 @@ export const ICONS_CODEPOINTS: { [key in Icons]: string } = {
   [Icons.Care]: "61707",
   [Icons.Check]: "61708",
   [Icons.Clap]: "61709",
-  [Icons.Close]: "61710",
-  [Icons.Crown]: "61711",
-  [Icons.Date]: "61712",
-  [Icons.District]: "61713",
-  [Icons.Egg]: "61714",
-  [Icons.Ellipse]: "61715",
-  [Icons.Feather]: "61716",
-  [Icons.Filter]: "61717",
-  [Icons.Food]: "61718",
-  [Icons.ForkSpoon]: "61719",
-  [Icons.Gps]: "61720",
-  [Icons.Health]: "61721",
-  [Icons.Home]: "61722",
-  [Icons.Lang]: "61723",
-  [Icons.Load]: "61724",
-  [Icons.Logo]: "61725",
-  [Icons.MoneyBag]: "61726",
-  [Icons.More]: "61727",
-  [Icons.Pet]: "61728",
-  [Icons.Photo]: "61729",
-  [Icons.Pin]: "61730",
-  [Icons.Pizza]: "61731",
-  [Icons.Plate]: "61732",
-  [Icons.Price]: "61733",
-  [Icons.Reply]: "61734",
-  [Icons.Search]: "61735",
-  [Icons.Share]: "61736",
-  [Icons.Shop]: "61737",
-  [Icons.Star]: "61738",
-  [Icons.Steak]: "61739",
-  [Icons.Travel]: "61740",
-  [Icons.User]: "61741",
-  [Icons.Zoom]: "61742",
+  [Icons.Clean]: "61710",
+  [Icons.CloseCircle]: "61711",
+  [Icons.CloseSircle]: "61712",
+  [Icons.Close]: "61713",
+  [Icons.Crown]: "61714",
+  [Icons.Date]: "61715",
+  [Icons.District]: "61716",
+  [Icons.Egg]: "61717",
+  [Icons.Ellipse]: "61718",
+  [Icons.Feather]: "61719",
+  [Icons.Filter]: "61720",
+  [Icons.Food]: "61721",
+  [Icons.ForkSpoon]: "61722",
+  [Icons.Gps]: "61723",
+  [Icons.Hanger]: "61724",
+  [Icons.Health]: "61725",
+  [Icons.Home]: "61726",
+  [Icons.Lang]: "61727",
+  [Icons.Load]: "61728",
+  [Icons.Logo]: "61729",
+  [Icons.MoneyBag]: "61730",
+  [Icons.More]: "61731",
+  [Icons.Nursery]: "61732",
+  [Icons.Pet]: "61733",
+  [Icons.Photo]: "61734",
+  [Icons.Pin]: "61735",
+  [Icons.Pizza]: "61736",
+  [Icons.Plate]: "61737",
+  [Icons.Price]: "61738",
+  [Icons.Reply]: "61739",
+  [Icons.Search]: "61740",
+  [Icons.Share]: "61741",
+  [Icons.Shop]: "61742",
+  [Icons.Star]: "61743",
+  [Icons.Steak]: "61744",
+  [Icons.Tap]: "61745",
+  [Icons.Travel]: "61746",
+  [Icons.User]: "61747",
+  [Icons.Wc]: "61748",
+  [Icons.Zoom]: "61749",
 };

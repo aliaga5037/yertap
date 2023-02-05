@@ -36,8 +36,12 @@ const Reviews = ({
 
         <div className="ml-auto flex">
           <i className="icon icon-star mr-2 flex" />
-          <span className="mr-2 text-sm font-medium leading-1 text-gray-dark3">{review.average}</span>
-          <span className='text-sm font-normal leading-1 text-gray-dark3'>({review.count.toLocaleString()})</span>
+          <span className="mr-2 text-sm font-medium leading-1 text-gray-dark3">
+            {review.average}
+          </span>
+          <span className="text-sm font-normal leading-1 text-gray-dark3">
+            ({review.count.toLocaleString()})
+          </span>
         </div>
       </div>
 
@@ -129,13 +133,15 @@ const Reviews = ({
           </div>
           <div className="flex justify-around">
             <div className="flex">
-              <i className="icon icon-clap mr-3 flex" /> 24
+              <i className="icon icon-clap mr-3 flex cursor-pointer items-center" />
+              24
             </div>
             <div className="flex">
-              <i className="icon icon-reply mr-3  flex" /> 10
+              <i className="icon icon-reply mr-3 flex  cursor-pointer items-center" />
+              10
             </div>
             <div>
-              <i className="icon icon-share flex" />
+              <i className="icon icon-share flex cursor-pointer items-center" />
             </div>
           </div>
         </div>

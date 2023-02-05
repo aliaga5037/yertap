@@ -3,6 +3,14 @@ import React from 'react';
 import type { User } from 'types';
 
 const Avatar = ({ user, className }: { user: User; className?: string }) => {
+  const getInitials = (name: string) => {
+    const names = name.split(' ');
+    if (names.length === 1) {
+      return names[0][0];
+    }
+    return names[0][0] + names[1][0];
+  };
+
   return (
     <div
       className={`${className} flex h-8 w-8 flex-row items-center justify-center rounded-full bg-purple-base align-middle`}
@@ -17,9 +25,7 @@ const Avatar = ({ user, className }: { user: User; className?: string }) => {
         />
       )}
       {!user.image && (
-        <span className="capitalize text-white">
-          {user.name.split(' ')[0][0]} {user.name.split(' ')[1][0]}
-        </span>
+        <span className="capitalize text-white">{getInitials(user.name)}</span>
       )}
     </div>
   );

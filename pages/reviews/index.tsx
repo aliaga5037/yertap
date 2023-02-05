@@ -41,7 +41,7 @@ const reviews = [
     user: {
       id: 1,
       name: 'John Doe',
-      image: '/images/user.jpg',
+      image: '',
     },
     rating: 3,
     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam massa, eget aliquam nisl nunc vel nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam massa, eget aliquam nisl nunc vel nisl.',
@@ -221,13 +221,13 @@ const Reviews = () => {
 
               <div className="flex justify-around">
                 <div className="flex">
-                  <i className="icon icon-clap mr-3 flex" /> 24
+                  <i className="icon icon-clap mr-3 flex cursor-pointer" /> 24
                 </div>
                 <div className="flex">
-                  <i className="icon icon-reply mr-3 flex" /> 10
+                  <i className="icon icon-reply mr-3 flex cursor-pointer" /> 10
                 </div>
                 <div>
-                  <i className="icon icon-share flex " />
+                  <i className="icon icon-share flex cursor-pointer " />
                 </div>
               </div>
             </div>

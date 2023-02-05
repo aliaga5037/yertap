@@ -67,7 +67,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
       user: {
         id: 1,
         name: 'John Doe',
-        image: '/images/user.jpg',
+        image: '',
       },
       title: 'John clapped your Review!',
       text: `Looking for low prices? We've got an entire page dedicated to finding you fantastic deals in your favorite places.`,

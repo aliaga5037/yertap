@@ -75,10 +75,10 @@ export const sampleRestaurantData: Restaurant[] = [
       },
     ],
     highlights: [
-      { title: 'Free Wifi', icon: '' },
-      { title: 'Full Service', icon: '' },
-      { title: 'Washing-Stand', icon: '' },
-      { title: 'Every Hour Cleaning', icon: '' },
+      { title: 'Free Wifi', icon: 'hanger' },
+      { title: 'Full Service', icon: 'wc' },
+      { title: 'Washing-Stand', icon: 'tap' },
+      { title: 'Every Hour Cleaning', icon: 'nursery' },
     ],
     review: {
       average: 4.5,

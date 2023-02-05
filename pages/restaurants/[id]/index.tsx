@@ -64,6 +64,7 @@ const Details = ({ item }) => {
             Show All (32) Photos
           </Link>
         </div>
+        {item.gallery && (
         <div className="mb-4 flex h-[416px] gap-2 overflow-hidden rounded-lg">
           <div className="flex w-[636px]">
             <ImageSlider countType="numbers" images={item.gallery} />
@@ -80,9 +81,8 @@ const Details = ({ item }) => {
             <div className="relative flex h-[160px] w-[556px] gap-2">
               <div className="relative h-full w-full">
                 <Image
-                  sizes="(max-width: 556px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
+                  sizes={`(max-width: 556px) 100vw,
+                          (max-width: 1200px) 50vw, 33vw`}
                   fill
                   src={item.gallery[3]}
                   alt=""
@@ -91,9 +91,8 @@ const Details = ({ item }) => {
               <div className="relative h-full w-full">
                 <Image
                   fill
-                  sizes="(max-width: 556px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
+                  sizes={`(max-width: 556px) 100vw,
+                          (max-width: 1200px) 50vw, 33vw`}
                   src={item.gallery[4]}
                   alt=""
                 />
@@ -101,9 +100,8 @@ const Details = ({ item }) => {
               <div className="relative h-full w-full">
                 <Image
                   fill
-                  sizes="(max-width: 556px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
+                  sizes={`(max-width: 556px) 100vw,
+                          (max-width: 1200px) 50vw, 33vw`}
                   src={item.gallery[5]}
                   alt=""
                 />
@@ -111,6 +109,7 @@ const Details = ({ item }) => {
             </div>
           </div>
         </div>
+        )}
         <div>
           <Tabs item={item} />
         </div>
