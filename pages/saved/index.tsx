@@ -26,7 +26,7 @@ const Saved = ({ items }: { items: Restaurant[] }) => {
           />
         </div>
 
-        <div className="flex flex-wrap gap-5">
+        <div className="grid grid-cols-3 gap-5">
           {items.map((item) => (
             <Card key={item.id} {...item} />
           ))}
