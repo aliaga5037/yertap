@@ -34,7 +34,7 @@ const IndexPage = () => {
           ))}
         </div>
 
-        <div className="flex flex-wrap gap-5">
+        <div className="grid grid-cols-3 gap-5">
           {sampleRestaurantData.map((res) => (
             <Card key={res.id} {...res} />
           ))}

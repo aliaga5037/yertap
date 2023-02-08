@@ -10,7 +10,7 @@ const Location = () => {
 
       <div className="relative flex">
         <div className="h-[496px] w-[793px]">
-          <Image src="/images/map.jpg" alt="map" fill={true} />
+          <Image src="/images/map.jpg" alt="map" fill />
         </div>
       </div>
     </div>

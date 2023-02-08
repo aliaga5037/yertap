@@ -72,10 +72,10 @@ const Details = ({ item }) => {
           <div className="flex grow flex-col gap-2">
             <div className="flex h-[248px] gap-2">
               <div className="relative w-[274px]">
-                <Image fill={true} src={item.gallery[1]} alt="" />
+                <Image fill src={item.gallery[1]} alt="" />
               </div>
               <div className="relative w-[274px]">
-                <Image fill={true} src={item.gallery[2]} alt="" />
+                <Image fill src={item.gallery[2]} alt="" />
               </div>
             </div>
             <div className="relative flex h-[160px] w-[556px] gap-2">

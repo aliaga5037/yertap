@@ -35,7 +35,7 @@ const Card = ({
   gallery,
 }: CardProps) => {
   return (
-    <div className={`relative mb-10 flex flex-col`}>
+    <div className={`relative mb-10 flex flex-col  ${className ?? ''}`}>
       {sponsored && (
         <Badge
           className="absolute top-3 left-3 z-10 mb-3 rounded-lg px-2 py-0"
@@ -45,24 +45,14 @@ const Card = ({
         />
       )}
 
-      <Link
-        href={`/restaurants/${id}`}
-        className={`relative flex flex-col ${className ?? ''}`}
-      >
-        {gallery ? (
-          <div className="mb-3 h-[256px] w-[285px] overflow-hidden rounded-lg">
+      <Link href={`/restaurants/${id}`} className={`relative flex flex-col mb-3`}>
+        <div className="h-[256px] w-full overflow-hidden rounded-lg">
+          {gallery ? (
             <ImageSlider countType="dots" images={gallery} />
-          </div>
-        ) : (
-          <Image
-            className="mb-3 rounded-lg"
-            width={285}
-            height={256}
-            src={image}
-            alt={title}
-            priority={false}
-          />
-        )}
+          ) : (
+            <Image fill src={image} alt={title} priority={false} />
+          )}
+        </div>
       </Link>
 
       <div className="mb-4 flex items-center justify-between">

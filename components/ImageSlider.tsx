@@ -91,7 +91,7 @@ const ImageSlider = ({ images, countType }: ImageSliderProps) => {
       >
         <i className="icon icon-arrow flex justify-center" />
       </button>
-      <Image src={images[currentImage]} alt="restaurant" fill={true} />
+      <Image src={images[currentImage]} alt="restaurant" fill />
 
       {getCountType()}
 
