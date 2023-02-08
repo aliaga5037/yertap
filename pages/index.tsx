@@ -6,7 +6,7 @@ import { sampleRestaurantData, tags } from '@utils/sample-data';
 const IndexPage = () => {
   return (
     <Layout title="Home | Yertap">
-      <div className="flex w-full flex-col pl-11">
+      <div className="flex w-full flex-col pl-11 ">
         <div className="flex justify-between">
           <h1 className="text-2xl font-bold leading-5 tracking-tighter">
             Restaurants
@@ -34,7 +34,7 @@ const IndexPage = () => {
           ))}
         </div>
 
-        <div className="flex flex-wrap justify-between">
+        <div className="flex flex-wrap gap-5">
           {sampleRestaurantData.map((res) => (
             <Card key={res.id} {...res} />
           ))}

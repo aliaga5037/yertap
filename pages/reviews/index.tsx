@@ -5,73 +5,39 @@ import Autocomplete from '@mui/material/Autocomplete';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
 
-import { sampleRestaurantData } from '@utils/sample-data';
+import {
+  reviews as InitialReviews,
+  sampleRestaurantData,
+  categories,
+} from '@utils/sample-data';
 import Image from 'next/image';
 import Avatar from '@components/Avatar';
 import TextRating from '@components/TextRating';
 import Tag from '@components/Tag';
 import Sponsored from '@components/Sponsored';
-
-const reviews = [
-  {
-    id: 1,
-    user: {
-      id: 1,
-      name: 'John Doe',
-      image: '/images/user.jpg',
-    },
-    rating: 4.5,
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam massa, eget aliquam nisl nunc vel nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam massa, eget aliquam nisl nunc vel nisl.',
-    date: '2020-01-01',
-    claps: 10,
-    restaurant: {
-      id: 1,
-      title: 'Vapiano',
-      image: '/images/vapiano.jpg',
-      type: 'Italian',
-      tags: ['Italian', 'Pizza', 'Pasta'],
-      rating: {
-        average: 4,
-        count: 10,
-      },
-    },
-  },
-  {
-    id: 2,
-    user: {
-      id: 1,
-      name: 'John Doe',
-      image: '',
-    },
-    rating: 3,
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam massa, eget aliquam nisl nunc vel nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam massa, eget aliquam nisl nunc vel nisl.',
-    date: '2020-01-01',
-    claps: 5,
-    restaurant: {
-      id: 2,
-      title: 'Starbucks',
-      image: '/images/starbucks.jpg',
-      type: 'Coffee',
-      tags: ['Coffee', 'Cafe'],
-      rating: {
-        average: 3,
-        count: 102,
-      },
-    },
-  },
-];
+import CategoryTabs from '@components/CategoryTabs';
 
 const Reviews = () => {
+  const [reviews, setReviews] = useState(InitialReviews);
   const [selected, setSelected] = useState(sampleRestaurantData[0]);
+
+  const handleCategoryChange = (index) => {
+    const category = categories[index];
+    const filteredReviews = InitialReviews.filter(
+      (review) => review.details.itemType === category.title
+    );
+    setReviews(filteredReviews);
+  };
+
   return (
     <Layout title="Reviews">
       <div className="flex">
-        <div className="relative px-11">
+        <div className="relative flex w-[678px] flex-col px-11">
           <h1 className="mb-6 text-2xl font-bold leading-5 text-gray-dark2">
             Review
           </h1>
 
-          <div className="mb-12 flex w-[590px] flex-col rounded-xl bg-gray-light0 p-6">
+          <div className="mb-12 flex  flex-col rounded-xl bg-gray-light0 p-6">
             <div className="mb-6 flex flex-col">
               <Stack spacing={2} sx={{ width: '100%' }}>
                 <Autocomplete
@@ -154,10 +120,17 @@ const Reviews = () => {
             </div>
           </div>
 
+          <div className="mb-8 flex">
+            <CategoryTabs
+              categories={categories}
+              onChange={handleCategoryChange}
+            />
+          </div>
+
           {reviews.map((item) => (
             <div
               key={item.id}
-              className="mb-4 flex w-[590px] flex-col rounded-xl bg-gray-light0 p-6"
+              className="mb-4 flex flex-col rounded-xl bg-gray-light0 p-6"
             >
               <div className="mb-6 flex">
                 <Avatar user={item.user} className="mr-4 h-12 w-12" />
@@ -189,31 +162,31 @@ const Reviews = () => {
               <div className="mb-6 flex w-full overflow-hidden rounded-lg border border-gray-light3 bg-white">
                 <Image
                   className="mr-5 h-auto w-auto"
-                  src={item.restaurant?.image}
-                  alt={item.restaurant?.title}
+                  src={item.details?.image}
+                  alt={item.details?.title}
                   priority={true}
                   width={128}
                   height={128}
                 />
                 <div className="flex flex-col justify-center py-4">
                   <span className="text-sm font-semibold leading-2 text-gray-dark3">
-                    {item.restaurant?.title}
+                    {item.details?.title}
                   </span>
                   <span className="mb-2 text-sm font-normal leading-2 text-gray-dark3">
-                    {item.restaurant?.type}
+                    {item.details?.type}
                   </span>
                   <div className="mb-3 flex">
-                    {item.restaurant?.tags.map((tag) => (
+                    {item.details?.tags.map((tag) => (
                       <Tag key={tag} title={tag} className="mr-1" />
                     ))}
                   </div>
                   <div className="flex items-center">
                     <i className="icon icon-star mr-2 flex" />
                     <span className="mr-2 text-sm font-medium leading-1 text-gray-dark3">
-                      {item.restaurant.rating.average}
+                      {item.details.rating.average}
                     </span>
                     <span className="text-sm font-normal leading-1 text-gray-dark3">
-                      ({item.restaurant.rating.count.toLocaleString()})
+                      ({item.details.rating.count.toLocaleString()})
                     </span>
                   </div>
                 </div>

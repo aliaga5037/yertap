@@ -28,7 +28,7 @@ const Layout = ({ children, title = 'Yertap', hideSidebar }: Props) => {
       </Head>
       <Header />
 
-      <main className="flex flex-row px-[120px] py-6">
+      <main className="flex flex-row lg:px-[120px] md:px-20  py-6">
         {!hideSidebar && (
           <div className="flex flex-col">
             <Link

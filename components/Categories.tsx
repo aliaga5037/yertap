@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import Badge from './Badge';
 
@@ -19,8 +20,9 @@ const Categories = ({ categories, activeUrl }: CategoriesProps) => {
   return (
     <div className="w-auto">
       {categories.map((category) => (
-        <div
+        <Link
           key={category.id}
+          href={`${category.isAvailable ? category.slug : '#'}`}
           className={`grid w-full  cursor-pointer grid-cols-[1fr_3fr_1fr]
           items-center rounded-lg px-4 py-3 text-sm font-medium leading-2 
           text-gray-base hover:bg-purple-light1 hover:text-purple-dark1 ${
@@ -33,7 +35,7 @@ const Categories = ({ categories, activeUrl }: CategoriesProps) => {
           {!category.isAvailable && (
             <Badge className="ml-auto !py-0" text="Soon" type="border" />
           )}
-        </div>
+        </Link>
       ))}
     </div>
   );

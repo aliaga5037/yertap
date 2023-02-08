@@ -62,81 +62,87 @@ export const Header: React.FC = () => {
               Yertap
             </span>
           </Link>
-          <Dropdown title="Categories" className="mr-1">
-            <div className="mt-2 -ml-14 w-[277px] overflow-hidden rounded-lg border border-gray-light3 bg-white">
-              <div className="flex items-center border-b border-b-gray-light3 py-4 px-6">
-                <h1 className="text-base font-semibold leading-2 text-gray-base">
-                  Categories
-                </h1>
-              </div>
-              <div className="px-2 py-6">
-                <Categories activeUrl={activeUrl} categories={categories} />
-              </div>
-            </div>
-          </Dropdown>
-          <Dropdown title="City" className="mr-1">
-            <div className="mt-2 -ml-14 w-[277px] overflow-hidden rounded-lg border border-gray-light3 bg-white">
-              <div className="flex items-center border-b border-b-gray-light3 py-4 px-6">
-                <h1 className="text-base font-semibold leading-2 text-gray-base">
-                  City
-                </h1>
-              </div>
-
-              <div className="flex border-b py-4 px-2">
-                <div className="flex w-full flex-col">
-                  <Link
-                    href="/"
-                    className="rounded-lg py-4 px-4 text-base font-medium leading-2 text-gray-base hover:bg-purple-light1 hover:text-purple-base"
-                  >
-                    Baku
-                  </Link>
-                  <Link
-                    href="/"
-                    className="rounded-lg py-4 px-4 text-base font-medium leading-2 text-gray-base hover:bg-purple-light1 hover:text-purple-base"
-                  >
-                    Ganja
-                  </Link>
+          <div className="flex items-center">
+            <Dropdown title="Categories" className="mr-1">
+              <div className="mt-2 -ml-14 w-[277px] overflow-hidden rounded-lg border border-gray-light3 bg-white">
+                <div className="flex items-center border-b border-b-gray-light3 py-4 px-6">
+                  <h1 className="text-base font-semibold leading-2 text-gray-base">
+                    Categories
+                  </h1>
+                </div>
+                <div className="px-2 py-6">
+                  <Categories activeUrl={activeUrl} categories={categories} />
                 </div>
               </div>
-            </div>
-          </Dropdown>
+            </Dropdown>
+            <Dropdown title="City" className="mr-1">
+              <div className="mt-2 -ml-14 w-[277px] overflow-hidden rounded-lg border border-gray-light3 bg-white">
+                <div className="flex items-center border-b border-b-gray-light3 py-4 px-6">
+                  <h1 className="text-base font-semibold leading-2 text-gray-base">
+                    City
+                  </h1>
+                </div>
 
-          <Dropdown title="District" className="mr-1">
-            <div className="mt-2 -ml-14 w-[277px] overflow-hidden rounded-lg border border-gray-light3 bg-white">
-              <div className="flex items-center border-b border-b-gray-light3 py-4 px-6">
-                <h1 className="text-base font-semibold leading-2 text-gray-base">
-                  District
-                </h1>
-              </div>
-
-              <div className="flex border-b py-4 px-2">
-                <div className="flex w-full flex-col">
-                  <Link
-                    href="/"
-                    className="rounded-lg py-4 px-4 text-base font-medium leading-2 text-gray-base hover:bg-purple-light1 hover:text-purple-base"
-                  >
-                    Bineqedi
-                  </Link>
-                  <Link
-                    href="/"
-                    className="rounded-lg py-4 px-4 text-base font-medium leading-2 text-gray-base hover:bg-purple-light1 hover:text-purple-base"
-                  >
-                    Xocasen
-                  </Link>
+                <div className="flex border-b py-4 px-2">
+                  <div className="flex w-full flex-col">
+                    <Link
+                      href="/"
+                      className="rounded-lg py-4 px-4 text-base font-medium leading-2 text-gray-base hover:bg-purple-light1 hover:text-purple-base"
+                    >
+                      Baku
+                    </Link>
+                    <Link
+                      href="/"
+                      className="rounded-lg py-4 px-4 text-base font-medium leading-2 text-gray-base hover:bg-purple-light1 hover:text-purple-base"
+                    >
+                      Ganja
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-          </Dropdown>
-          <Stack spacing={2} sx={{ width: 300 }}>
-            <Autocomplete
-              id="free-solo-demo"
-              freeSolo
-              size="small"
-              options={top100Films.map((option) => option.title)}
-              renderInput={(params) => <TextField {...params} label="Search" />}
-              clearIcon={<i className="icon icon-close-circle flex text-lg text-gray-dark1" />}
-            />
-          </Stack>
+            </Dropdown>
+
+            <Dropdown title="District" className="mr-1">
+              <div className="mt-2 -ml-14 w-[277px] overflow-hidden rounded-lg border border-gray-light3 bg-white">
+                <div className="flex items-center border-b border-b-gray-light3 py-4 px-6">
+                  <h1 className="text-base font-semibold leading-2 text-gray-base">
+                    District
+                  </h1>
+                </div>
+
+                <div className="flex border-b py-4 px-2">
+                  <div className="flex w-full flex-col">
+                    <Link
+                      href="/"
+                      className="rounded-lg py-4 px-4 text-base font-medium leading-2 text-gray-base hover:bg-purple-light1 hover:text-purple-base"
+                    >
+                      Bineqedi
+                    </Link>
+                    <Link
+                      href="/"
+                      className="rounded-lg py-4 px-4 text-base font-medium leading-2 text-gray-base hover:bg-purple-light1 hover:text-purple-base"
+                    >
+                      Xocasen
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </Dropdown>
+            <Stack spacing={2} sx={{ width: 300 }}>
+              <Autocomplete
+                id="free-solo-demo"
+                freeSolo
+                size="small"
+                options={top100Films.map((option) => option.title)}
+                renderInput={(params) => (
+                  <TextField {...params} label="Search" />
+                )}
+                clearIcon={
+                  <i className="icon icon-close-circle flex text-lg text-gray-dark1" />
+                }
+              />
+            </Stack>
+          </div>
         </div>
         <div className="flex">
           <button className="flex flex-row items-center">

@@ -281,3 +281,54 @@ export const tags = [
   { id: 6, title: 'burger', icon: 'burger' },
   { id: 7, title: 'steak', icon: 'steak' },
 ];
+
+export const reviews = [
+  {
+    id: 1,
+    user: {
+      id: 1,
+      name: 'John Doe',
+      image: '/images/user.jpg',
+    },
+    rating: 4.5,
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam massa, eget aliquam nisl nunc vel nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam massa, eget aliquam nisl nunc vel nisl.',
+    date: '2020-01-01',
+    claps: 10,
+    details: {
+      itemType: 'Restaurant',
+      id: 1,
+      title: 'Vapiano',
+      image: '/images/vapiano.jpg',
+      type: 'Italian',
+      tags: ['Italian', 'Pizza', 'Pasta'],
+      rating: {
+        average: 4,
+        count: 10,
+      },
+    },
+  },
+  {
+    id: 2,
+    user: {
+      id: 1,
+      name: 'John Doe',
+      image: '',
+    },
+    rating: 3,
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam massa, eget aliquam nisl nunc vel nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam massa, eget aliquam nisl nunc vel nisl.',
+    date: '2020-01-01',
+    claps: 5,
+    details: {
+      itemType: 'Shopping',
+      id: 2,
+      title: 'Starbucks',
+      image: '/images/starbucks.jpg',
+      type: 'Coffee',
+      tags: ['Coffee', 'Cafe'],
+      rating: {
+        average: 3,
+        count: 102,
+      },
+    },
+  },
+];
